@@ -10094,6 +10094,26 @@ int main(){
         cout<<endl;
     }
 }
+// 8948 - Template 3
+#include <bits/stdc++.h>
+using namespace std;
+string X[102][102];
+int main(){
+    short n,i,j;
+    cin>>n;
+    short m=n,M=n;
+    i=j=1;
+    while(M--)X[i++][j++]="*";
+    i=m,j=1;
+    while(m--)X[i--][j++]="*";
+    for(i=1;i<=2*n-1;++i){
+        for(j=1;j<=2*n-1;++j){
+            if(X[i][j]=="*")cout<<X[i][j];
+            else cout<<" ";
+        }
+        cout<<endl;
+    }
+}
 // 8953 - Print array
 #include <bits/stdc++.h>
 using namespace std;
@@ -10907,6 +10927,19 @@ int main(){
         cout<<endl;
     }
 }
+// 9400 - Düzbucaqlı üçbucaq
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    short n,i,j;
+    cin>>n;
+    for(i=1;i<=n;++i){
+        j=i;
+        while(j--)cout<<'*';
+        cout<<endl;
+    }
+}
 // 9401 - Düzbucaqlı üçbucaq 2
 #include <bits/stdc++.h>
 using namespace std;
@@ -10938,6 +10971,48 @@ int main(){
             else cout<<"*";
         }
         cout << endl;
+    }
+}
+// 9403 - Cross
+#include <bits/stdc++.h>
+using namespace std;
+string X[102][102];
+int main(){
+    short n,i,j;
+    cin>>n;
+    short m=2*n,M=2*n;
+    i=1,j=1;
+    while(--M)X[i++][j++]="*";
+    i=m-1,j=1;
+    while(--m)X[i--][j++]="*";
+    for(i=1;i<=2*n-1;++i){
+        for(j=1;j<=2*n-1;++j){
+            if(X[i][j]=="*")cout<<X[i][j];
+            else cout<<" ";
+        }
+        cout<<endl;
+    }
+}
+// 9404 Kvadrat və dioqonalları
+#include <bits/stdc++.h>
+using namespace std;
+string X[102][102];
+int main(){
+    short n,i,j;
+    cin>>n;
+    for(i=0;i<n;++i)X[0][i]=X[n-1][i]="*";
+    for(i=1;i<n-1;++i)X[i][0]=X[i][n-1]="*";
+    short m=n-1,M=n-1;
+    i=1,j=1;
+    while(--M)X[i++][j++]="*";
+    i=m-1,j=1;
+    while(--m)X[i--][j++]="*";
+    for(i=0;i<=n-1;++i){
+        for(j=0;j<=n-1;++j){
+            if(X[i][j]=="*")cout<<X[i][j];
+            else cout<<" ";
+        }
+        cout<<endl;
     }
 }
 // 9405 - Professor and balloons
@@ -12614,6 +12689,14 @@ long long gcd(long long a,long long b){
 long long lcm(long long a,long long b){
     return (a/gcd(a,b))*b;
 }
+// 10921 - Rook
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    short a,b,ans=0;
+    cin>>a>>b;
+    cout<<a+b-2;
+}
 // 10942 - Count words
 #include <bits/stdc++.h>
 using namespace std;
@@ -12733,6 +12816,27 @@ int main(){
     string maximal=s;
     cout<<numerify(maximal)-numerify(minimal);
 }
+// 11077 - Style change
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    string s,ans;
+    int T,i,j,check1=0,check2=0;
+    cin>>T;
+    while(T--){
+        cin>>s;
+        ans="";
+        for(i=0;i<s.size();++i){
+            if(s[i]>='A' && s[i]<='Z')ans+="_",ans+=(s[i]+('a'-'A'));
+            else ans+=s[i];
+        }
+        if(ans[0]=='_' && ans[ans.size()-1]!='_')cout<<ans.substr(1,ans.size()-1);
+        else if(ans[ans.size()-1]=='_')cout<<ans.substr(0,ans.size()-1);
+        else if(ans[0]!='_' && ans[ans.size()-1]!='_')cout<<ans;
+            else cout<<ans.substr(1,ans.size()-2);
+        cout<<endl;
+    }
+}
 // 11112 - Qəribə ardıcıllıq
 #include <bits/stdc++.h>
 using namespace std;
@@ -12781,4 +12885,20 @@ int main(){
         }
     }
     cout<<ans;
+}
+// 11151 - Sum a + b
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    long long a,b;
+    cin>>a>>b;
+    cout<<a<<" + "<<b<<" = "<<a+b;
+}
+// 11152 - Last symbol
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    string s;
+    getline(cin,s);
+    cout<<s[s.size()-1];
 }
