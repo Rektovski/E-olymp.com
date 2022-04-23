@@ -3713,6 +3713,39 @@ int main(){
     if((a+b+c)%3!=0)cout<<"IMPOSSIBLE";
     else cout<<P;
 }
+// 2207 Electric train
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int hour,minute;
+    char x;
+    cin>>hour>>x>>minute;
+    if(!hour)cout<<"00";
+    else if(hour<10)cout<<0<<hour;
+        else cout<<hour;
+    cout<<x;
+    if(!minute)cout<<"00";
+    else if(minute<10)cout<<0<<minute;
+        else cout<<minute;
+    cout<<endl;
+    int T,n;
+    cin>>T;
+    while(--T){
+        cin>>n;
+        minute+=n;
+        if(minute>59)hour+=minute/60,minute%=60;
+        if(hour>23)hour%=24;
+        if(!hour)cout<<"00";
+        else if(hour<10)cout<<0<<hour;
+        else cout<<hour;
+        cout<<x;
+        if(!minute)cout<<"00";
+        else if(minute<10)cout<<0<<minute;
+            else cout<<minute;
+        cout<<endl;
+    }
+}
 // 2214 - Function 9
 #include <bits/stdc++.h>
 using namespace std;
@@ -8290,6 +8323,11 @@ int main(){
         if(C[i]==frequency)break;
     }
     cout<<i<<endl<<frequency;
+}
+// 8762 - Sum (functions)
+long long solve(long long a, long long b)
+{
+        return a+b;
 }
 // 8763 - Sum of array elements
 #include <bits/stdc++.h>
