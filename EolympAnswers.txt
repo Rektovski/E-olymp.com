@@ -6233,6 +6233,35 @@ int main(){
     } 
     cout<<pasuxi<<" "<<jeradoba<<endl; 
 }
+// 6941 - Sum of GCD
+#define ll long long
+#include <bits/stdc++.h>
+using namespace std;
+
+ll gcd(ll a,ll b){
+    return !a?b:gcd(b%a,a);
+}
+
+int main(){
+    ll T,N,n,a,i,j,ans;
+    cin>>T;
+    while(T--){
+        cin>>N;
+        ans=i=0,n=N;
+        ll arr[n];
+        while(N--){
+            cin>>a;
+            arr[i++]=a;
+        }
+        for(i=0;i<n;++i){
+            for(j=i+1;j<n;++j){
+                if(i==n-1)break;
+                else ans+=gcd(arr[i],arr[j]);
+            }
+        }
+        cout<<ans<<endl;
+    }
+}
 // 7239 - "Все, Степан! Ти мене дістав!"
 #include <bits/stdc++.h>
 using namespace std;
@@ -8340,6 +8369,28 @@ int main(){
     for(i=0;i<n;++i)
         cin>>arr[i],sum+=arr[i];
     cout<<sum;
+}
+// 8764 - Знову сума (функції)
+#define ll long long
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    ll ans=0,a,b,c,n;
+    cin>>a>>b>>c;
+    while(cin>>n)ans+=n;
+    cout<<ans;
+}
+// 8765 - Знайдiть максимум (функції)
+#define ll long long
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    ll ans=0,a,b,n;
+    cin>>a>>b;
+    while(cin>>n)ans=max(ans,n);
+    cout<<ans;
 }
 // 8767 - Candies
 #include <bits/stdc++.h>
