@@ -12905,6 +12905,32 @@ int main(){
     string maximal=s;
     cout<<numerify(maximal)-numerify(minimal);
 }
+// 11021 - Міжнародна олімпіада
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    short n;
+    cin>>n;
+    if(n==1989)cout<<1;
+    else if(n>=1990 && n<=1992)cout<<2;
+        else if(n==1993)cout<<4;
+        else if(n>=1994 && n<=2008)cout<<6;
+        else if(n==2009 || n==2010)cout<<8;
+        else cout<<6;
+}
+// 11022 - Пін-код
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    string s;
+    cin>>s;
+    map<short,short>C;
+    for(short i=0;i<s.size();++i)++C[s[i]-'0'];
+       if(C.size()==1 || (s[0]==s[1]-1 && s[1]==s[2]-1 && s[2]==s[3]-1))cout<<"Yes"<<endl;
+       else cout<<"No"<<endl;
+}
 // 11077 - Style change
 #include <bits/stdc++.h>
 using namespace std;
