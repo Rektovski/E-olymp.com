@@ -407,6 +407,15 @@ int main(){
         // tu masivis elementi arc maxia da arc minia gamoitans shuatanas
     }
 }
+// 112 - Cake
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    double a,b,c;
+    cin>>a>>b>>c;
+    cout<<setprecision(2)<<fixed<<1/(1/a+1/b+1/c);
+}
 // 115 - Two digits
 #include <bits/stdc++.h>
 using namespace std;
