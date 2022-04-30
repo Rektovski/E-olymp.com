@@ -2372,6 +2372,24 @@ int main(){
     }
     cout<<ans;
 }
+// 1141 - Median of numbers
+#include <bits/stdc++.h>
+using namespace std;
+short A[1001];
+int main(){
+    short i=0,n,j;
+    while(cin>>n)A[i++]=n;
+    if(i%2==0)cout<<-1;
+    else {
+        sort(A,A+i);
+        short X=A[i/2],Y=0;
+        for(j=0;j<i;++j){
+            if(A[j]==X)++Y;
+            if(Y>1){cout<<-1;break;}
+        }
+        if(Y==1)cout<<X;
+    }
+}
 // 1146 - GCD
 #define ull unsigned long long
 
