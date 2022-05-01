@@ -5285,6 +5285,17 @@ int main(){
 // 4848 - Quick Sort
 #include <bits/stdc++.h>
 using namespace std;
+
+int main(){
+    int n;
+    multiset<int>D;
+    while(cin>>n)D.insert(n);
+    for(auto i=D.begin();i!=D.end();++i)cout<<*i<<" ";
+}
+
+/*
+#include <bits/stdc++.h>
+using namespace std;
 int main(){
     int a;
     multiset<int>D;
@@ -5296,6 +5307,7 @@ int main(){
     for(X=DS.begin();X!=DS.end();++X)
         cout<<(*X)<<" ";
 }
+*/
 // 5049 - Remove spaces
 #include <bits/stdc++.h>
 using namespace std;
