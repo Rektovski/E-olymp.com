@@ -5769,6 +5769,18 @@ int main(){
 // 5337 - Different-different
 #include <bits/stdc++.h>
 using namespace std;
+
+int main(){
+    int n,T;
+    set<int>D;
+    cin>>T;
+    while(T--)cin>>n,D.insert(n);
+    cout<<D.size();
+}
+
+/*
+#include <bits/stdc++.h>
+using namespace std;
 set<int>A;
 int main(){
     long long n,i;
@@ -5780,6 +5792,7 @@ int main(){
     }
     cout<<A.size();
 }
+*/
 // 5711 - Вася и транспортир
 #include <bits/stdc++.h>
 using namespace std;
