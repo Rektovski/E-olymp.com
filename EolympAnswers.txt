@@ -5204,6 +5204,32 @@ int main(){
         B+=A[i++][j--];
     cout<<B;
 }
+// 4752 - Cinema 
+#include <bits/stdc++.h>
+using namespace std;
+
+int gcd(int a,int b){
+    return !b?a+1:gcd(b,a%b);
+}
+
+int main() {
+    int a,b;
+    cin>>a>>b;
+    cout<<gcd(a-1,b-1);
+}
+// 4753 - Cinema+
+#include <bits/stdc++.h>
+using namespace std;
+
+int gcd(int a,int b){
+    return !b?a+1:gcd(b,a%b);
+}
+
+int main() {
+    int a,b;
+    cin>>a>>b;
+    cout<<gcd(a-1,b-1);
+}
 // 4760 - Move zeroes
 #include <bits/stdc++.h>
 using namespace std;
