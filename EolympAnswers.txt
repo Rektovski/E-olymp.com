@@ -9874,6 +9874,16 @@ int main(){
         cout<<i*i<<" ";
     }
 }
+// 8919 - Perfect cubes
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n,i;
+    cin>>n;
+    for(i=1;pow(i,3)<=n;++i)
+        cout<<pow(i,3)<<" ";
+}
 // 8920 - Некратные 2 3 5
 #include <bits/stdc++.h>
 using namespace std;
