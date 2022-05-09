@@ -8809,6 +8809,15 @@ bool check(int a){
 }
 
 */
+// 8823 - Кількість n-значних чисел 5
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    unsigned long long n,ans;
+    cin>>n;
+    ans=(pow(10,n)-pow(10,n-1))-8*pow(9,n-1);
+    cout<<ans;
+}
 // 8824 - Find the number
 #include <iostream>
 using namespace std;
@@ -9969,6 +9978,38 @@ int main(){
         if((n[i]-'0')%2==0)ans=ans*10+n[i]-'0'+1;
         else ans=ans*10+n[i]-'0'-1;
     }
+    cout<<ans;
+}
+// 8927 - Smallest Divisor
+#include <bits/stdc++.h>
+using namespace std;
+
+int IsPrime(int n){
+    if(n<4)return n!=1;
+    if(n%2==0 || n%3==0)return 0;
+    for(int i=5;i<=sqrt(n);++i)
+        if(n%i==0)return 0;
+    return 1;
+}
+
+int main(){
+    int n,i;
+    cin>>n;
+    if(IsPrime(n))cout<<n;
+    else {
+        for(i=2;i<=n;++i)
+            if(n%i==0){cout<<i;break;}
+    }
+}
+// 8928 - Greatest divisor
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n,i,ans=1;
+    cin>>n;
+    for(i=2;i<=sqrt(n);++i)
+        if(n%i==0){ans=n/i;break;}
     cout<<ans;
 }
 // 8929 - Простое число
