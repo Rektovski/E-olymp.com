@@ -3894,6 +3894,19 @@ int main(){
     fasi=(SSF-(d/2))*c;
     cout<<SSF<<endl<<SF<<endl<<setprecision(6)<<fixed<<fasi;
 }
+// 2391 - Cost of call
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    long long n,a,b;
+    cin>>a>>b>>n;
+    if(!n)cout<<0;
+    else {
+        n=n%60==0 ? n/60 : n/60 + 1;
+        cout<<n*b+a;
+    }
+}
 // 2415 - Disc Number
 #include <iostream>
 using namespace std;
