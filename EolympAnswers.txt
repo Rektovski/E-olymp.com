@@ -675,6 +675,30 @@ int main()
 }
 
 */
+// 266 - Comparison
+#include <bits/stdc++.h>
+using namespace std;
+
+string fun(string a, string b){
+    if(a.size()>b.size())return ">";
+    if(a.size()<b.size())return "<";
+    if(a.size()==b.size()){
+        int max=a.size();
+        for(int i=0;i<max;++i){
+            if(a[i]!=b[i]){
+                if(a[i]>b[i])return ">";
+                return "<";
+            }
+        }
+    }
+    return "=";
+}
+
+int main(){
+    string a,b;
+    cin>>a>>b;
+    cout<<fun(a,b);
+}
 // 273 - Modular Exponentiation
 #include <bits/stdc++.h>
 using namespace std;
