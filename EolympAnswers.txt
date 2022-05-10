@@ -5585,6 +5585,28 @@ int main(){
     cin>>a;
     cout<<a%10;
 }
+// 5198 - Modular Exponentiation
+#define ull unsigned long long
+#include <bits/stdc++.h>
+using namespace std;
+
+ull BP(ull a,ull b,ull c){
+    if(a>c)a%=c;
+    ull ans=1;
+    while(b>0){
+        if(b&1)ans=ans*a%c;
+        a=a*a%c;
+        b>>=1;
+    }
+    return ans;
+}
+
+
+int main(){
+    ull a,b,c;
+    cin>>a>>b>>c;
+    cout<<BP(a,b,c);
+}
 // 5233 - Watson`s magic number
 #include <bits/stdc++.h>
 using namespace std;
