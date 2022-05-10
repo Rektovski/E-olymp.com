@@ -113,6 +113,17 @@ int main(){
 }
 
 */
+// 19 - Degree of symmetry
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int i,len=0,ans=0;
+    char ch[12],temp;
+    while(cin>>temp)ch[len++]=temp; 
+    for(i=0;i<=(len-1)/2;++i)if(ch[i]==ch[len-i-1])++ans;
+    cout<<ans;
+}
 // 20 - How many times to repeat?
 #include <bits/stdc++.h>
 using namespace std;
