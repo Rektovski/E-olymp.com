@@ -585,6 +585,33 @@ int main(){
     cin>>n;
     cout<<(n-1)*(n-2);
 }
+// 177 - Poker (RU)
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    string s;
+    int T,i,Mj;
+    cin>>T;
+    while(T--){
+        map<string,int>D;
+        Mj=0;
+        for(i=1;i<=5;++i){
+            cin>>s;
+            ++D[s];
+            Mj=max(Mj,D[s]);
+        }
+        if(D.size()==1){cout<<"poker\n";continue;}
+        if(Mj==4){cout<<"quads\n";continue;}
+        if(Mj==3){
+            D.size()==2 ? cout<<"full house\n" : cout<<"set\n";
+            continue;
+        }
+        if(D.size()==3){cout<<"two pair\n";continue;}
+        if(D.size()==4){cout<<"pair\n";continue;}
+        cout<<"no pair\n";
+    }
+}
 // 206 - Tourist
 ***********************************************************************
 #include <iostream>
