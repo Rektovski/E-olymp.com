@@ -11176,6 +11176,10 @@ int main(){
     sort(arr,arr+n);
     cout<<arr[k-1];
 }
+// 9026 - Проста задача (функції)
+void solve(int a) {
+    cout<<a/10<<" "<<a%10;
+}
 // 9027 - Digits density
 #include <bits/stdc++.h>
 using namespace std;
