@@ -4266,6 +4266,17 @@ int main(){
         cin>>n,D.insert(n);
     cout<<D.size();
 }
+// 2804 - Квадратные числа
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    long long a,n=0,b;
+    cin>>a;
+    while(a)n+=a%10,a/=10;
+    b=sqrt(n);
+    b*b==n ? cout<<"Yes" : cout<<"No";
+}
 // 2806 - Числа
 #include <iostream>
 using namespace std;
