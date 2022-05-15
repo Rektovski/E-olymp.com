@@ -6595,6 +6595,29 @@ int main(){
     cin>>n;
     cout<<--n;
 }
+// 7406 - Прості числа царства Ерудит
+#include <bits/stdc++.h>
+using namespace std;
+
+short IsPrime(long long n){
+    if(n<4)return n!=1;
+    if(!(n&1)  || !(n%3))return 0;
+    long long i; int d=2;
+    for(i=5;i<=sqrt(n);i+=d,d=6-d)
+        if(n%i==0)return 0;
+    return 1;
+}
+
+int main(){
+    long long T,n,temp;
+    cin>>T;
+    while(T--){
+        cin>>n;
+        temp=sqrt(n);
+        if(temp*temp==n && IsPrime(temp))cout<<1;
+        else cout<<0;
+    }
+}
 // 7460 - Sightseeing trip
 #include <bits/stdc++.h>
 using namespace std;
