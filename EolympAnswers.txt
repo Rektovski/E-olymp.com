@@ -588,6 +588,17 @@ int main(){
     cin>>a>>b;
     cout<<ans(a,b);
 }
+// 149 - Factorial - 2
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    long long n,i;
+    cin>>n;
+    double ans=0;
+    for(i=1;i<=n;++i)ans+=log10(i);
+    cout<<int(ans)+1;
+}
 // 157 - Zoo
 #include <bits/stdc++.h>
 using namespace std;
@@ -12917,6 +12928,16 @@ int main(){
         }
         cout<<P;
     }
+}
+// 10767 - Паліндромна лихоманка
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    string s;
+    cin>>s;
+    reverse(s.begin(),s.end());
+    cout<<s;
 }
 // 10801 - Sum of digits
 #include <bits/stdc++.h>
