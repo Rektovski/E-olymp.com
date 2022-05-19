@@ -12052,6 +12052,24 @@ int main(){
     }
     cout<<setprecision(4)<<fixed<<sum/mnishvneli;
 }
+// 9897 - Set of strings
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int T;
+    cin>>T;
+    string s;
+    getline(cin,s);
+    while(T--){
+        getline(cin,s);
+        stringstream SS(s);
+        map<int,string>C;
+        while(SS>>s)C[s.size()]+=s+' ';
+        for(auto i=C.begin();i!=C.end();++i)cout<<i->second;
+        cout<<endl;
+    }
+}
 // 9900 - Кількість натуральних
 #include <iostream>
 using namespace std;
