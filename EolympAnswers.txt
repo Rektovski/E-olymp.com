@@ -6601,6 +6601,16 @@ int main(){
     cin>>n;
     decToBinary(n);
 }
+// 7340 - Поле-чудес
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    set<char>D;
+    char x;
+    while(cin>>x)D.insert(x);
+    cout<<D.size();
+}
 // 7366 - Сколько до Нового Года?
 #include <bits/stdc++.h>
 using namespace std;
