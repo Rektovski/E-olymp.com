@@ -11564,6 +11564,18 @@ int main(){
     }
     cout<<j;
 }
+// 9625 - toUpperCase
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    string s;
+    getline(cin,s);
+    for(int i=0;s[i];++i){
+        if(s[i]>='a' && s[i]<='z')s[i]-=32;
+        cout<<s[i];
+    }
+}
 // 9648 - Sort the digits of numbers
 #include <bits/stdc++.h>
 using namespace std;
