@@ -11576,6 +11576,19 @@ int main(){
         cout<<s[i];
     }
 }
+// 9626 - startsWith endsWith
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    string a,b,c;
+    cin>>a>>b>>c;
+    if(b.size()>a.size() || c.size()>a.size())cout<<"false";
+    else {
+        a.substr(0,b.size())==b ? cout<<"true\n" : cout<<"false\n";
+        a.substr(a.size()-c.size(),c.size())==c ? cout<<"true" : cout<<"false";
+    }
+}
 // 9648 - Sort the digits of numbers
 #include <bits/stdc++.h>
 using namespace std;
