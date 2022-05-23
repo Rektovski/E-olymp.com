@@ -6739,6 +6739,15 @@ int main(){
     }
     for(i=0;i<n;++i)printf("%d ",arr[i]);
 }
+// 7459 - Odd positions
+#include <stdio.h>
+
+int main(){
+    int n;
+    scanf("%d",&n);
+    if(n<0)n=-n;
+    printf("%d",(n/10000)*(n/100%10)*(n%10));
+}
 // 7460 - Sightseeing trip
 #include <bits/stdc++.h>
 using namespace std;
