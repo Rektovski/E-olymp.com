@@ -6715,7 +6715,6 @@ int main(){
     cin>>s;
     cout<<s/(3600*24)<<" "<<s%(3600*24)/3600<<" "<<s%(3600*24)%3600/60<<" "<<s%(3600*24)%3600%60;
 }
-
 /*
 
 Day - s/(3600*24)
@@ -6724,6 +6723,16 @@ Minute - s%(3600*24)%3600/60
 Second - s%(3600*24)%3600%60
 
 */
+// 7367 - Спортсмен
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    double a=10,b=a*0.1,ans=0,sum=0,n;
+    cin>>n;
+    for(int i=0;sum<n;sum+=a,a+=0.1*a,++i,++ans);
+    cout<<ans;
+}
 // 7368 - Arithmetic mean for figure skaters
 #include <bits/stdc++.h>
 using namespace std;
