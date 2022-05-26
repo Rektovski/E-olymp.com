@@ -2766,6 +2766,50 @@ int main()
 }
 
 */
+// 1344 - Personal files
+#include <bits/stdc++.h>
+using namespace std;
+
+class CV {
+    public: 
+        string surname;
+        string name;
+        string Class;
+        string date;
+    
+        void printOut(){
+            cout<<Class+' '+surname+' '+name+' '+date+'\n';
+        }
+};
+
+short compare(CV a,CV b){
+    string A=a.Class,B=b.Class;
+    int c=0,d=0;
+    if(A.size()==2)c=A[0]-'0';
+    else {
+        for(int i=0;i<=1;++i)c=c*10+A[i]-'0';
+    }
+    if(B.size()==2)d=B[0]-'0';
+    else {
+        for(int i=0;i<=1;++i)d=d*10+B[i]-'0';
+    }
+    if(c<d)return 1;
+    if(c>d)return 0;
+    if(A[A.size()-1]<B[B.size()-1])return 1;
+    if(A[A.size()-1]>B[B.size()-1])return 0;
+    if(a.surname<b.surname)return 1;
+    if(a.surname>b.surname)return 0;
+    return 0;
+}
+
+int main(){
+    CV C[1001];
+    int n;
+    cin>>n;
+    for(int i=0;i<n;++i)cin>>C[i].surname>>C[i].name>>C[i].Class>>C[i].date;
+    sort(C,C+n,compare);
+    for(int i=0;i<n;++i)C[i].printOut();
+}
 // 1427 - Calculator
 #include <iostream>
 using namespace std;
