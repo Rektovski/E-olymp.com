@@ -6791,6 +6791,25 @@ int main(){
         else cout<<0;
     }
 }
+// 7411 - Equation for the 5-th class!
+#include <stdio.h>
+
+int main(){
+    char s[6];
+    scanf("%s",s);
+    if(s[0]=='x'){
+        if(s[1]=='+')printf("%d",s[4]-'0'-(s[2]-'0'));
+        if(s[1]=='-')printf("%d",s[4]-'0'+(s[2]-'0'));
+	}
+    if(s[2]=='x'){
+        if(s[1]=='+')printf("%d",s[4]-'0'-(s[0]-'0'));
+        if(s[1]=='-')printf("%d",s[0]-'0'-(s[4]-'0'));
+	}
+	if(s[4]=='x'){
+        if(s[1]=='+')printf("%d",s[0]-'0'+(s[2]-'0'));
+        if(s[1]=='-')printf("%d",s[0]-'0'-(s[2]-'0'));
+	}
+}
 // 7452 - Print Linked List
 #include <stdio.h>
 
