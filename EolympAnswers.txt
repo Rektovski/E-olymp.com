@@ -6791,6 +6791,17 @@ int main(){
         else cout<<0;
     }
 }
+// 7410 - Маршрутне таксі
+#include <bits/stdc++.h>
+using namespace std; 
+int main(){
+    long long a,b,c,Ans,Sashualo;
+    cin>>a>>b>>c;
+    Sashualo=(a+b+c)/3;
+    Ans=(abs(a-Sashualo)+abs(b-Sashualo)+abs(c-Sashualo))/2;
+    if((a+b+c)%3!=0)cout<<"IMPOSSIBLE";
+    else cout<<Ans;
+}
 // 7411 - Equation for the 5-th class!
 #include <stdio.h>
 
