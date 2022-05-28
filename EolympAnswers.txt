@@ -634,6 +634,30 @@ int main(){
         cout<<"no pair\n";
     }
 }
+// 192 - Just Fibonacci (RU)
+#include <stdio.h>
+#include <math.h>
+
+int isPrime(int n){
+    if(n<4)return n!=1;
+    if(n%2==0 || n%3==0)return 0;
+    long long d=2,i;
+    for(i=5;i<=sqrt(n);i+=d,d=6-d)
+        if(n%i==0)return 0;
+    return 1;
+}
+
+int main(){
+    int i,fibo=1,last=1,n,ans=0;
+    scanf("%d",&n);
+    for(int i=1;;++i){
+        fibo=fibo+last;
+        last=fibo-last;
+        if(isPrime(fibo))++ans;
+        if(ans==n)break;
+    }
+    printf("%d",fibo);
+}
 // 206 - Tourist
 ***********************************************************************
 #include <iostream>
