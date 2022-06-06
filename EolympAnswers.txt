@@ -13671,3 +13671,24 @@ int main(){
     getline(cin,s);
     cout<<s[s.size()-1];
 }
+// 11248 - Primes at the interval
+#include <stdio.h>
+#include <math.h>
+
+int isPrime(int n){
+    if(n<4)return n!=1;
+    if(!(n&1) || !(n%3))return 0;
+    long long i,d=2;
+    for(i=5;i<=sqrt(n);i+=d,d=6-d)if(n%i==0)return 0;
+    return 1;
+}
+
+int main(){
+    int ans=0,b,c;
+    scanf("%d%d",&b,&c);
+    if(b%2==0)--b;
+    for(int i=b;i>=2;--i){
+        ans+=isPrime(i);
+        if(ans==c){printf("%d",i);break;}
+    }
+}
