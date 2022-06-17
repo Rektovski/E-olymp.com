@@ -11726,6 +11726,28 @@ int main(){
         cout<<arr1[i]+arr2[i]<<" ";
     }
 }
+// 9537 - Transpose the matrix
+#include <stdio.h>
+
+int main(){
+    int A[102][102];
+    int n,m,i,j,K=1;
+    scanf("%d %d",&n,&m);
+    for(i=0;i<=m+1;++i)A[0][i]=A[n+1][i]=1;
+    for(i=1;i<=n;++i)  A[i][0]=A[i][m+1]=1;
+    i=j=1;
+    while(K<=n*m){
+        if(A[i][j])++i,j=1;
+        scanf("%d",&A[i][j++]);
+        ++K;
+    }
+    for(j=1;j<=m;++j){
+        for(i=1;i<=n;++i){
+            printf("%d ",A[i][j]);
+        }
+        printf("\n");
+    }
+}
 // 9551 - Sum a*a + ... + b * b
 #include <bits/stdc++.h>
 using namespace std;
