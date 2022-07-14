@@ -13753,6 +13753,21 @@ int main(){
     getline(cin,s);
     cout<<s[s.size()-1];
 }
+// 11244 - Two sum
+#include <stdio.h>
+
+int main(){
+    int n,i,j,sum,ans=0;
+    scanf("%d %d", &n,&sum);
+    int arr[n];
+    for(i=0;i<n;++i)scanf("%d", &arr[i]);
+    for(i=0,j=n-1;i<j;){
+        if(arr[i]+arr[j]==sum){printf("YES\n");break;}
+        else if(arr[i]+arr[j]<sum)++i;
+            else --j; // arr[i] + arr[j] > sum
+        if(i==j)printf("NO\n");
+    }
+}
 // 11248 - Primes at the interval
 #include <stdio.h>
 #include <math.h>
