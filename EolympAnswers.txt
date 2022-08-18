@@ -1247,6 +1247,14 @@ int main(){
     }
     cout<<P;
 }
+// 575 - Sequence (RU)
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    n<4 ? printf("%d", n) : printf("%d", (n-2)*3);
+}
 // 617 - Lotto (RU)
 #include <bits/stdc++.h>
 using namespace std;
