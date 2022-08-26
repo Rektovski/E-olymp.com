@@ -3656,6 +3656,23 @@ int main()
 
 
 ************************************
+// 1965 - Rank
+#include <stdio.h>
+
+int main(){
+    long long n,i,P,ans=1;
+    scanf("%lld", &n);
+    long long arr[n];
+    for(i=0;i<n;++i)scanf("%lld", &arr[i]);
+    scanf("%lld", &P);
+    while(ans<=n){
+        if(P>arr[ans-1]){
+            printf("%lld", ans);break;
+        }
+        ++ans;
+    }
+    if(ans>n)printf("%lld", ans);
+}
 // 2031 - Fibonacci sequence
 #include <bits/stdc++.h>
 using namespace std;
