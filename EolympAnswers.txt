@@ -3673,6 +3673,22 @@ int main(){
     }
     if(ans>n)printf("%lld", ans);
 }
+// 1966 - A big plus
+#include <stdio.h>
+
+int main(){
+    short n,i,j;
+    scanf("%hd", &n);
+    n=1+2*n;
+    char A[201][201];
+    for(i=0;i<n;++i)for(j=0;j<n;++j)A[i][j]='.';
+    for(i=0,j=n/2;i<n;++i)A[i][j]='*';
+    for(i=n/2,j=0;j<n;++j)A[i][j]='*';
+    for(i=0;i<n;++i){
+        for(j=0;j<n;++j)printf("%c", A[i][j]);
+        printf("\n");
+    }
+}
 // 2031 - Fibonacci sequence
 #include <bits/stdc++.h>
 using namespace std;
