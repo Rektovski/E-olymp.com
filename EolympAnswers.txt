@@ -829,6 +829,17 @@ int main(){
     }
     cout<<P;
 }
+// 354 - Permutation
+#include <stdio.h>
+#include <set>
+int main() {
+	int a, n, i;
+	scanf("%d", &n);
+        std::set<int>D;
+	for(i=0;i<n;++i)scanf("%d", &a),D.insert(a);
+	for(i=1;i<=n && D.count(i);++i);
+	i <= n ? printf("%d", i) : printf("0");
+}
 // 357 - Maximum Salary
 #include <bits/stdc++.h>
 using namespace std;
