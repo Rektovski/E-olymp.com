@@ -12354,6 +12354,18 @@ int main(){
         if(!b)cout<<"Division by zero"<<endl;
         else cout<<a/b<<endl;
 }
+// 9893 - Matrix: sum of indexes
+#include <stdio.h>
+
+int main(){
+    short n,i,j=2;
+    scanf("%hd", &n);
+    for(int d=0;d++<n;){
+        for(i=j;i<n+j;++i)printf("%hd  ", i);
+        printf("\n");
+        i=++j;
+    }
+}
 // 9894 - Sum of rows
 #include <iostream>
 using namespace std;
