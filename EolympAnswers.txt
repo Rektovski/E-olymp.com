@@ -4705,6 +4705,28 @@ int main() {
         cout<<"Rule "<<Q<<": "<<S<<endl;
     }
 }
+// 3570 - Good or Bad?
+#include <iostream>
+using namespace std;
+
+int main(){
+    short T;
+    cin>>T;
+    string s;
+    getline(cin,s);
+    while(T--){
+        getline(cin,s);
+        int g=0,b=0;
+        for(int i=0;s[i];++i){
+            if(s[i]=='g' || s[i]=='G')++g;
+            else if(s[i]=='b' || s[i]=='B')++b;
+        }
+        if(g==b)cout<<s<<" is NEUTRAL";
+        else if(g>b)cout<<s<<" is GOOD";
+            else cout<<s<<" is A BADDY";
+        cout<<endl;
+    }
+}
 // 3732 - Разящий тапок
 #include <bits/stdc++.h>
 using namespace std;
