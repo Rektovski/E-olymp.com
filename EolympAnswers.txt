@@ -13245,6 +13245,17 @@ int main(){
         cout<<endl;
     }
 }
+// 10274 - Who has the highest grade?
+#include <stdio.h>
+
+int main(){
+    // Petryk Marichka Olenka
+    int p, m, o;
+    scanf("%d%d%d", &p, &m, &o);
+    if(p>m && p>o)printf("Petryk");
+    else if(m>p && m>o)printf("Marichka");
+        else printf("Olenka");
+}
 // 10275 - А+Б=С?
 #include<bits/stdc++.h> 
 using namespace std;
