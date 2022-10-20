@@ -6865,6 +6865,20 @@ int main(){
     while(cin>>x)D.insert(x);
     cout<<D.size();
 }
+// 7365 - Milk and a pie
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    int n,i=0,pupil=0;
+    scanf("%d", &n);
+    double arr[n];
+    while(scanf("%lg", &arr[i])==1)if(arr[i++]<30)++pupil;
+    printf("%lg %d", ceil((0.2*pupil)/0.9), pupil);
+}
+
+// %lg == double with setprecision 0 
+// %lf == double with setprecision FLOAT
 // 7366 - Сколько до Нового Года?
 #include <bits/stdc++.h>
 using namespace std;
