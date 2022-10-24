@@ -4632,6 +4632,22 @@ int main(){
     cin>>n;
     cout<<convert(n);
 }
+// 3255 - Arithmetic
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    long long ans;
+    cin>>ans;
+    long long n;
+    char x;
+    while(cin>>x){
+        cin>>n;
+        if(x=='+')ans+=n;
+        else if(x=='*')ans*=n;
+    }
+    cout<<ans;
+}
 // 3258 - Fibonacci Sequence
 #include <bits/stdc++.h>
 using namespace std;
@@ -6341,6 +6357,24 @@ int main(){
     int a,b;
     cin>>a>>b;
     cout<<(a^b);
+}
+// 6022 - Death Knight Hero
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int T,ans=0;
+    cin>>T;
+    while(T--){
+        string s;
+        cin>>s;
+        int check=1;
+        for(int i=0;s[i] && check;++i){
+            if(s[i]=='C' && s[i+1]=='D')check=0;
+        }
+        ans+=(check==1);
+    }
+    cout<<ans;
 }
 // 6059 - Sum of Odd Sequence
 #include <bits/stdc++.h>
@@ -11983,6 +12017,22 @@ int main(){
     else {
         a.substr(0,b.size())==b ? cout<<"true\n" : cout<<"false\n";
         a.substr(a.size()-c.size(),c.size())==c ? cout<<"true" : cout<<"false";
+    }
+}
+// 9634 - Go to the finals
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int T;
+    cin>>T;
+    while(T--){
+        double n;
+        char x;
+        cin>>n>>x;
+        if(n>=3.5 && (x=='A' || x=='B'))cout<<1;
+        else cout<<0;
+        cout<<endl;
     }
 }
 // 9648 - Sort the digits of numbers
