@@ -13053,8 +13053,39 @@ int main(){
 იქიდან გამომდინარე, რომ ამოცანას უკუღმა მივყვებით, რომ პასუხი დავწეროთ შესაბამისად, პასუხი სტრინგის სახით ჯერ უნდა შებრუნდეს
 და მერე დაიბეჭდოს.
 */
+// 10074
+#define ull unsigned long long
+#include <bits/stdc++.h>
+using namespace std;
 
+string decToBin(ull n){
+    string s="";
+    while(n){
+        if(n%2)s+='1';
+        else s+='0';
+        n/=2;
+    }
+    reverse(s.begin(),s.end());
+    return '0'+s;
+}
 
+int main(){
+    ull n;
+    cin>>n;
+    string s=decToBin(n);
+    set<short>D;
+    for(int i=0;i<s.size()-1;){
+        int point=1;
+        int d=i+1;
+        for(int j=i+1;s[j];++j,++i){
+            if(s[i]!=s[j])++point;
+            else break;
+        }
+        i=d;
+        D.insert(point);
+    }
+    cout<<*D.rbegin();
+}
 // 10075 - T3. Спираль Т
 // წინა ამოხსნა საზღვრებიანად იყო ამიტომ განულდა
 
