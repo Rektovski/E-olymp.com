@@ -13730,6 +13730,20 @@ int main(){
     cin>>a>>b;
     cout<<a+b-2;
 }
+// 10941 - TF Problem
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    string s;
+    cin>>s;
+    if(!(s.find('T')+1))cout<<-1;
+    else {
+        reverse(s.begin(),s.end());
+        int ans=s.find('T')+1;
+        cout<<s.size()-ans;
+    }
+}
 // 10942 - Count words
 #include <bits/stdc++.h>
 using namespace std;
