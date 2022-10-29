@@ -11897,6 +11897,30 @@ int main(){
     }
     cout<<P;
 }
+// 9557 - Bins and balls
+#define ll long long
+#include <stdio.h>
+
+int M=1000000007;
+
+ll BP(ll ricxvi, ll xarisxi){
+  if(!xarisxi)return 1;
+  if(!(xarisxi&1))return BP((ricxvi*ricxvi)%M,xarisxi>>1);
+  return (ricxvi*BP(ricxvi,xarisxi-1))%M;
+}
+
+int main(){
+    int n;
+    scanf("%d", &n);
+    printf("%lld", BP(n-1,n-1)*n%M);
+}
+
+// a=n-1;
+// n * a^a
+// We need Binary Power or ModuExpo to stay in time;
+
+
+// n * (n-1)^(n-1)
 // 9560 - Two-dimensional array - input, output
 #include <iostream>
 using namespace std;
