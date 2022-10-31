@@ -2644,6 +2644,26 @@ int main()
 
 */
 *******************************************
+// 1213 - Massive Numbers
+#include <bits/stdc++.h>
+using namespace std;
+
+short strToNum(string s){
+    stringstream SS;
+    short ans;
+    SS<<s,SS>>ans;
+    return ans;
+}
+
+int main(){
+    string a,b;
+    cin>>a>>b;
+    short base1=strToNum(a.substr(0,a.find('^')));
+    short exponent1=strToNum(a.substr(a.find('^')+1,a.size()));
+    short base2=strToNum(b.substr(0,b.find('^')));
+    short exponent2=strToNum(b.substr(b.find('^')+1,b.size()));
+    exponent1*log(base1) >= exponent2*log(base2) ? cout<<a : cout<<b;
+}
 // 1215 - Rock, Paper, or Scissors?
 #include <bits/stdc++.h>
 using namespace std;
