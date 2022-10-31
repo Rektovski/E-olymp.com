@@ -14119,3 +14119,22 @@ int main(){
         if(arr[i]>arr[i+1] || arr[i]>arr[i-1]){printf("%d", i+1);break;}
     }
 }
+// 11290 - Card game
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int T,ans=0;
+    cin>>T;
+    while(T--){
+        string s;
+        cin>>s;
+        for(int i=0;s[i];++i){
+            if(s[i]=='A')ans+=4;
+            else if(s[i]=='K')ans+=3;
+            else if(s[i]=='Q')ans+=2;
+            else if(s[i]=='J')++ans;
+        }
+    }
+    cout<<ans;
+}
