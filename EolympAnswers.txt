@@ -927,6 +927,32 @@ int main()
             cout<<endl;
     }
 }
+// 419 - The 3n + 1 problem
+#include <stdio.h>
+#include <set>
+
+int main(){
+    long long a,b,i;
+    while(scanf("%lld %lld", &a, &b)==2){
+        printf("%lld %lld ", a, b);
+        std::set<long long>D;
+        long long ans=1;
+        if(a>b)std::swap(a,b);
+        for(i=a;i<=b;++i){
+            if(i==1)++ans;
+            else {
+                long long n=i;
+                while(n>1){
+                    n%2 ? n=n*3+1 : n/=2;
+                    ++ans;
+                }
+            }
+            D.insert(ans);
+            ans=1;
+        }
+        printf("%lld\n", *D.rbegin());
+    }
+}
 // 421 - Yo-Yo
 #include <iostream>
 using namespace std;
