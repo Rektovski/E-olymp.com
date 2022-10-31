@@ -5873,6 +5873,30 @@ int main(){
     }
     cout<<ans;
 }
+// 5083 - Sum of digits
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+    long long n,i;
+    cin>>n;
+    long long arr[n];
+    for(i=0;i<n;++i){
+        cin>>arr[i];
+    }
+    map<long long,long long>C;
+    for(i=0;i<n;++i){
+        long long number=arr[i],digit=0;
+        while(number)digit+=number%10,number/=10;
+        C[arr[i]]=digit;
+    }
+    long long minimalDigitSum=100000000,minimulNumber=100000000;
+    for(auto i=C.begin();i!=C.end();++i){
+        if(i->second<minimalDigitSum)minimalDigitSum=i->second, minimulNumber=i->first;
+    }
+    cout<<minimulNumber;
+}
 // 5087 - Implement a stack
 #include <bits/stdc++.h>
 using namespace std;
