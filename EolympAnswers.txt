@@ -4485,6 +4485,17 @@ int main(){
         cin>>n,D.insert(n);
     cout<<D.size();
 }
+// 2803 - МаркЕрованные кубики
+#include <stdio.h>
+
+int main(){
+    char c;
+    while(scanf("%c", &c)==1){
+        if(c>='0' && c<='8')++c;
+        else if(c=='9')c='0';
+        printf("%c", c);
+    }
+}
 // 2804 - Квадратные числа
 #include <bits/stdc++.h>
 using namespace std;
@@ -12070,6 +12081,37 @@ int main(){
         cout<<endl;
     }
 }
+// 9561 - Largest in each column
+#include <stdio.h>
+#include <algorithm>
+
+short A[100][100];
+
+void cinMatrixData(short n, short m);
+void findMaxInColumn(short n, short m);
+
+int main(){
+    short n,m;
+    scanf("%hd %hd", &n, &m);
+    cinMatrixData(n,m);
+    findMaxInColumn(n,m);
+}
+
+void cinMatrixData(short n, short m){
+    for(short i=0;i<n;++i)
+        for(short j=0;j<m;++j)
+            scanf("%hd", &A[i][j]);
+}
+
+void findMaxInColumn(short n, short m){
+    for(short j=0;j<m;++j){
+        short temp=-10000;
+        for(short i=0;i<n;++i){
+            temp = std::max(temp, A[i][j]);
+        }
+        printf("%hd ", temp);
+    }
+}
 // 9563 - Rows with minimal elements
 #include <bits/stdc++.h>
 using namespace std;
@@ -12099,6 +12141,47 @@ int main(){
         }
     }
 }
+// 9566 - Сортування по стовпцях
+#include <stdio.h>
+#include <algorithm>
+short A[100][100];
+
+void cinMatrixData(short row, short column);
+void reverseColumnOfSort(short row, short column);
+void printMatrix(short n, short m);
+
+int main(){
+    short n,m;
+    scanf("%hd %hd", &n, &m);
+    cinMatrixData(n,m);
+    reverseColumnOfSort(n,m);
+    printMatrix(n,m);
+}
+
+void cinMatrixData(short row, short column){
+    for(short i=0;i<row;++i)
+        for(short j=0;j<column;++j)
+            scanf("%hd", &A[i][j]);
+}
+
+void reverseColumnOfSort(short row, short column){
+    short i,j,k,g;
+    for(i=0;i<column;++i){
+        short arr[row];
+        for(j=0,k=0;j<row;++j)arr[k++]=A[j][i];
+        std::sort(arr,arr+k);
+        for(g=k-1,j=0;g>=0;--g,++j)A[j][i]=arr[g];
+    }
+}
+
+void printMatrix(short row, short column){
+    for(short i=0;i<row;++i){
+        for(short j=0;j<column;++j){
+            printf("%hd ", A[i][j]);
+        }
+        printf("\n");
+    }
+}
 // 9567 - Здвинути нульові елементи праворуч
 #include <stdio.h>
 
@@ -12117,6 +12200,158 @@ int main(){
         for(i=k;i<n;++i)printf("0 ");
         printf("\n");
     }
+}
+// 9568 - Здвинути нульові елементи в гору
+#include <stdio.h>
+#include <algorithm>
+short A[100][100];
+
+void cinMatrixData(short row, short column);
+void reverseColumnOfSort(short row, short column);
+void printMatrix(short n, short m);
+
+int main(){
+    short n,m;
+    scanf("%hd %hd", &n, &m);
+    cinMatrixData(n,m);
+    reverseColumnOfSort(n,m);
+    printMatrix(n,m);
+}
+
+void cinMatrixData(short row, short column){
+    for(short i=0;i<row;++i)
+        for(short j=0;j<column;++j)
+            scanf("%hd", &A[i][j]);
+}
+
+void reverseColumnOfSort(short row, short column){
+    short i,j,k,g;
+    for(i=0;i<column;++i){
+        k=i;
+        for(k=0;k<row;++k){
+            if(!A[k][i]){
+                int a=k-1,b=k;
+                for(int y=a;y>=0;--y,--b){
+                    std::swap(A[b][i],A[y][i]);
+                }
+            }
+        }
+    }
+}
+
+void printMatrix(short row, short column){
+    for(short i=0;i<row;++i){
+        for(short j=0;j<column;++j){
+            printf("%hd ", A[i][j]);
+        }
+        printf("\n");
+    }
+}
+// 9569 - Повернути масив за годинниковою стрілкою
+#include <stdio.h>
+
+short A[100][100], B[100][100];
+
+void cinMatrixData(short n);
+void transform45degree(short n);
+void printMatrix(short n);
+
+int main(){
+    short n;
+    scanf("%hd", &n);
+    cinMatrixData(n);
+    transform45degree(n);
+    printMatrix(n);
+}
+
+void cinMatrixData(short n){
+    for(short i=0;i<n;++i)
+        for(short j=0;j<n;++j)
+            scanf("%hd", &A[i][j]);
+}
+
+void transform45degree(short n){
+    int I=0,J=n-1;
+    for(int i=0;i<n;++i){
+        for(int j=0;j<n;++j){
+            B[I++][J]=A[i][j];
+        }
+        I=0,--J;
+    }
+}
+
+void printMatrix(short n){
+    for(short i=0;i<n;++i){
+        for(short j=0;j<n;++j){
+            printf("%hd ", B[i][j]);
+        }
+        printf("\n");
+    }
+}
+// 9570 - Відобразити відносно вертикальної осі 
+#include <iostream>
+using namespace std;
+
+int main(){
+    int a,b;
+    cin>>a>>b;
+    if(b%2){
+        string s;
+        getline(cin,s);
+        while(getline(cin,s)){
+            reverse(s.begin(), s.end());
+            cout<<s<<endl;
+        }
+    }
+    else {
+        while(a--){
+            int arr[b];
+            int i,k=b-1;
+            for(i=0;i<b;++i)cin>>arr[i];
+            for(i=0;i<k;++i,--k)swap(arr[i],arr[k]);
+            for(i=0;i<b;++i)cout<<arr[i]<<" ";
+            cout<<endl;
+        }
+    }
+}
+// 9571 - Сума елементів двохвимірного масиву
+#include <stdio.h>
+
+int main(){
+    short n,ans=0;
+    scanf("%hd %hd", &n, &n);
+    while(scanf("%hd", &n)==1)ans+=n;
+    printf("%hd", ans);
+}
+// 9572 - Number of even elements in a two-dimensional array
+#include <stdio.h>
+
+int main(){
+    short n,ans=0;
+    scanf("%hd %hd", &n, &n);
+    while(scanf("%hd", &n)==1)ans+=n%2==0;
+    printf("%hd", ans);
+}
+// 9573 - Сума додатних елементів у непарних рядках
+#include <stdio.h>
+
+int main(){
+    int n,m,ans=0,x;
+    scanf("%d %d", &n, &m);
+    for(int i=0;i<n;++i){
+        if(i%2==0){
+            for(int j=0;j<m;++j){
+                scanf("%d", &x);
+                if(x>0)ans+=x;
+            }
+        }
+        else {
+            for(int j=0;j<m;++j){
+                scanf("%d", &x);
+            }
+        }
+    }
+    printf("%d", ans);
 }
 // 9610 - Mixed sequence
 #include <bits/stdc++.h>
