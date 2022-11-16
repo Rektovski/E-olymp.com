@@ -13736,6 +13736,47 @@ int main(){
         cout<<endl;
     }
 }
+// 10246 - ACM Sort
+#include <bits/stdc++.h>
+using namespace std;
+
+class Team {
+    public:
+        string group;
+        short score;
+        short time;
+        short id;
+        
+    void setFullInfo(string grp, short scr, short tm, short ID){
+        group=grp,score=scr,time=tm,id=ID;
+    }
+    
+    void getFullInfo(){
+        cout<<group<<" "<<score<<" "<<time<<endl;
+    }
+};
+
+short compare(Team a,Team b){
+    if(a.score<b.score)return 0;
+    if(a.score>b.score)return 1;
+    if(a.time>b.time)return 0;
+    if(a.time<b.time)return 1;
+    return a.id<b.id;
+}
+
+int main(){
+    int n;
+    cin>>n;
+    Team tm[n];
+    string group;
+    short score,penaltyTime,i;
+    for(i=0;i<n;++i){
+        cin>>group>>score>>penaltyTime;
+        tm[i].setFullInfo(group,score,penaltyTime,i);
+    }
+    sort(tm,tm+n,compare);
+    for(int i=0;i<n;++i)tm[i].getFullInfo();
+}
 // 10274 - Who has the highest grade?
 #include <stdio.h>
 
