@@ -13736,6 +13736,75 @@ int main(){
         cout<<endl;
     }
 }
+// 10243 - Book 1
+#include <bits/stdc++.h>
+using namespace std;
+
+class Book{
+    public: 
+        int  book_id;
+        string title;
+        string author;
+        string subject;
+
+        void setFullInfo(int id,
+                         string bookName,
+                         string personName,
+                         string subjName){
+            book_id=id,title=bookName,author=personName,subject=subjName;
+        }
+
+        int checkId(int id){
+            return book_id==id;
+        }
+
+        void getAnswer(){
+            cout<<title+" by "+author<<endl;
+        }
+    
+    void getId(){
+        cout<<book_id<<endl;
+    }
+};
+
+int main(){
+    int n,i,id,T,x;
+    string bkNm,auth,sbjNm;
+    cin>>n;
+    Book book[n];
+    for(i=0;i<n;++i){
+        cin>>id;
+        getline(cin,bkNm);
+        getline(cin,bkNm);
+        getline(cin,auth);
+        getline(cin,sbjNm);
+        book[i].setFullInfo(id,bkNm,auth,sbjNm);
+    }
+    cin>>T;
+    while(T--){
+        cin>>x;
+        int check=0,j;
+        for(i=0;i<n && !check;++i){
+            if(book[i].checkId(x))check=1,j=i;
+        }
+        if(check)book[j].getAnswer();
+        else cout<<"Book not found\n";
+    }
+}
+// 10245 - Names and characters
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n,i,T,a,b;
+    cin>>n>>T;
+    string arr[n];
+    for(i=0;i<n;++i)cin>>arr[i];
+    while(T--){
+        cin>>a>>b;
+        cout<<arr[a-1][b];
+    }
+}
 // 10246 - ACM Sort
 #include <bits/stdc++.h>
 using namespace std;
