@@ -13846,6 +13846,62 @@ int main(){
     sort(tm,tm+n,compare);
     for(int i=0;i<n;++i)tm[i].getFullInfo();
 }
+// 10263 - Sort the people
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+class Person {
+    public:
+        string name,surname;
+        int year;
+    
+    void setFullInfo(string nm, string srn, int yr){
+        name=nm, surname=srn, year=yr;
+    }
+    
+    void getFullInfo(){
+        cout<<name<<" "<<surname<<" "<<year<<endl;
+    }
+};
+
+int compare(Person a,Person b){
+    int i;
+    string sr1=a.surname,sr2=b.surname;
+    if(sr1<sr2)return 1;
+    else if(sr1>sr2)return 0;
+        else {
+            for(i=0;sr1[i];++i){
+                if(sr1[i]<sr2[i])return 1;
+                else if(sr1[i]>sr2[i])return 0;
+            }
+        }
+    string nm1=a.name,nm2=b.name;
+    if(nm1<nm2)return 1;
+    else if(nm1>nm2)return 0;
+        else {
+            for(i=0;nm1[i];++i){
+                if(nm1[i]<nm2[i])return 1;
+                else if(nm1[i]>nm2[i])return 0;
+            }
+        }
+    return !(a.year<b.year);
+}
+
+int main(){
+    int n,i,year;
+    string name,surname;
+    cin>>n;
+    Person person[n];
+    for(i=0;i<n;++i){
+        cin>>name>>surname>>year;
+        person[i].setFullInfo(name, surname, year);
+    }
+    sort(person, person+n, compare);
+    for(i=0;i<n;++i){
+        person[i].getFullInfo();
+    }
+}
 // 10274 - Who has the highest grade?
 #include <stdio.h>
 
