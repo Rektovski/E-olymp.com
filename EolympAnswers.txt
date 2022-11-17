@@ -12877,6 +12877,17 @@ int main(){
         if(i==a)cout<<-1<<endl;
     }
 }
+// 9719 - Worker and Salary 2
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    map<string,int>C;
+    string s;
+    int n;
+    while(cin>>s>>n)C[s]=n;
+    for(auto i=C.begin();i!=C.end();++i)cout<<i->first<<" "<<i->second<<endl;
+}
 // 9722 - Java ArithmeticException
 #include <iostream>
 using namespace std;
