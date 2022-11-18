@@ -12404,6 +12404,15 @@ int main(){
     }
     printf("%d", ans);
 }
+// 9575 - Площа круга
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    double R;
+    scanf("%lf", &R);
+    printf("%.4lf", R*R*M_PI);
+}
 // 9610 - Mixed sequence
 #include <bits/stdc++.h>
 using namespace std;
