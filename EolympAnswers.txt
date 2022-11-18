@@ -12040,6 +12040,15 @@ int main(){
     cin>>n;
     cout<<n%10*1000+n/100%10*100+n/10%10*10+n/1000;
 }
+// 9428 - Fractions: minimum and maximum
+#include <stdio.h>
+
+int main(){
+    double a,b,c,d;
+    char x;
+    scanf("%lf %c %lf %lf %c %lf", &a, &x, &b, &c, &x, &d);
+    a/b>c/d ? printf("%d/%d %d/%d", int(c), int(d), int(a), int(b)) : printf("%d/%d %d/%d", int(a), int(b), int(c), int(d));
+}
 // 9539 - Задача про Вову
 #include <iostream>
 using namespace std;
