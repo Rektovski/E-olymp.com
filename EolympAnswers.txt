@@ -14757,6 +14757,21 @@ int main(){
         if(i==j)printf("NO\n");
     }
 }
+// 11247 - Container With Most Water
+#include <stdio.h>
+long long A[100000];
+
+int main(){
+    long long i=0,j,S,Mx=0;
+    int N;
+    scanf("%d", &N);
+    while(i<N)scanf("%lld", &A[i++]);
+    for(i=0,j=N-1;i<j;){
+        A[i]>A[j] ? S=(j-i)*A[j--] : S=(j-i)*A[i++];
+        if(S>Mx)Mx=S;
+    }
+    printf("%lld", Mx);
+}
 // 11248 - Primes at the interval
 #include <stdio.h>
 #include <math.h>
