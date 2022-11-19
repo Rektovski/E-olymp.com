@@ -3890,14 +3890,12 @@ int main(){
     cout<<a-1;
 }
 // 2071 - Три грибника
-#include <iostream>
-using namespace std;
-int main()
-{
+#include <stdio.h>
+
+int main() {
     short N;
-    cin>>N;
-    N/=24;
-    cout<<13*N<<' '<<4*N<<' '<<7*N;
+    scanf("%hd", &N);    
+    printf("%hd %hd %hd", 13*N/24, N/6, 7*N/24);
 }
 // 2097 - Three digit numbers
 #include<bits/stdc++.h> 
