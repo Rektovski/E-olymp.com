@@ -13436,6 +13436,74 @@ int main(){
 
 // atol(s.c_str()) == stringstream SS   SS<<s SS>>m
 
+// 9938 - Кількість n-значних чисел 3
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    long long n;
+    string s;
+    cin>>n>>s;
+    if(s.size()<n)cout<<0;
+    else if(s.size()>n)cout<<9*pow(10,n-1);
+        else cout<<atol(s.c_str()) - pow(10,n-1) + 1; 
+}
+
+// atol(s.c_str()) == stringstream SS   SS<<s SS>>m
+
+// 9939 - Кількість n-значних чисел 4
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    long long n;
+    string s;
+    cin>>n>>s;
+    if(s.size()<n)cout<<9*pow(10,n-1);
+    else if(s.size()>n)cout<<0;
+        else cout<<pow(10,n) - atol(s.c_str()); 
+}
+
+// atol(s.c_str()) == stringstream SS   SS<<s SS>>m
+
+// 9940 - Кількість n-значних чисел 5
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    long long a;
+    string b,c;
+    cin>>a>>b>>c;
+    if(b.size()>a || c.size()<a)cout<<0;
+    else if(b.size()==a && c.size()==a){
+        cout<<atol(c.c_str())-atol(b.c_str())+1;
+    }
+    else if(b.size()<a && c.size()>a){
+        long long n=9;
+        while(--a)n*=10;
+        cout<<n;
+    }
+    else if(b.size()<a && c.size()==a){
+        long long n=10;
+        --a;
+        while(--a)n*=10;
+        cout<<atol(c.c_str())-n+1;
+    }
+    else {
+        long long n=10;
+        while(--a)n*=10;
+        cout<<n-atol(b.c_str());
+    }
+}
+
+// atol(s.c_str()) == stringstream SS   SS<<s SS>>m
+
+// 1. Invalid Range             10 : 99 < b || c < 10 : 99
+// 2. Inside Range              10 <= b <= c <= 99
+// 3. Out of range              b < 10 : 99 < c
+// 4. First param out of range  b < 10 <= c <= 99
+// 5. Second param out of range 10 <= b <= 99 < c
+
 // 9945 - Кількість n-значних чисел 10
 #include <bits/stdc++.h>
 using namespace std;
