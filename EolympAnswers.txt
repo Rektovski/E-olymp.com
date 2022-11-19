@@ -14757,6 +14757,28 @@ int main(){
         if(i==j)printf("NO\n");
     }
 }
+// 11246 - Triplet sum
+#include <stdio.h>
+#include <algorithm>
+int A[10000];
+
+int main(){
+    int N, X, i=0, j, k, M;
+    scanf("%d %d", &N, &X);
+    while(i<N)scanf("%d", &A[i++]);
+    std::sort(A,A+N);
+    for(k=0;k<N-2;k++){
+        for(i=k+1,j=N-1;i<j;){
+            if((M=A[k]+A[i]+A[j])==X){
+                printf("%d %d %d\n", A[k], A[i], A[j]);
+                return 0;
+            }
+            else if(M<X)i++;
+                else j--;
+            if(k==N-3)printf("-1\n");
+        }
+    }
+}
 // 11247 - Container With Most Water
 #include <stdio.h>
 long long A[100000];
