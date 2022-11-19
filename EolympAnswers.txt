@@ -13957,6 +13957,14 @@ int main(){
         else if(a+b>c && a+c>b && b+c>a && (a!=b || a!=c || b!=c))printf("1");
                 else printf("0");
 }
+// 10226 - Социальные сети
+#include <stdio.h>
+
+int main(){
+    int a,b,c,d;
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+    printf("%d", a-c+b+d);
+}
 // 10243 - Book 1
 #include <bits/stdc++.h>
 using namespace std;
