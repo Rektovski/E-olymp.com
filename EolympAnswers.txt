@@ -13406,6 +13406,36 @@ int main(){
     wuti=minute-minute/60*60;
     cout<<dghe+1<<' '<<saati<<' '<<wuti;
 }
+// 9936 - Кількість n-значних чисел
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    long long n,m;
+    string s;
+    cin>>n>>s;
+    if(s.size()<n)cout<<0;
+    else if(s.size()>n)cout<<9*pow(10,n-1);
+        else cout<<atol(s.c_str())-pow(10,n-1); 
+}
+
+// atol(s.c_str()) == stringstream SS   SS<<s SS>>m
+
+// 9937 - Кількість n-значних чисел 2
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    long long n,m;
+    string s;
+    cin>>n>>s;
+    if(s.size()<n)cout<<pow(10,n)-pow(10,n-1);
+    else if(s.size()>n)cout<<0;
+        else cout<<pow(10,n)-1-atol(s.c_str()); 
+}
+
+// atol(s.c_str()) == stringstream SS   SS<<s SS>>m
+
 // 9945 - Кількість n-значних чисел 10
 #include <bits/stdc++.h>
 using namespace std;
