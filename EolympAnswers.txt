@@ -13946,6 +13946,17 @@ int main(){
         cout<<endl;
     }
 }
+// 10225 - Трикутник
+#include <stdio.h>
+
+int main(){
+    int a,b,c;
+    scanf("%d %d %d", &a, &b, &c);
+    if(a==b && a==c)printf("3");
+    else if(a+b>c && a+c>b && b+c>a && (a==b || a==c || b==c))printf("2");
+        else if(a+b>c && a+c>b && b+c>a && (a!=b || a!=c || b!=c))printf("1");
+                else printf("0");
+}
 // 10243 - Book 1
 #include <bits/stdc++.h>
 using namespace std;
