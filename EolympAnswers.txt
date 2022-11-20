@@ -4880,6 +4880,27 @@ int main(){
         cout<<endl;
     }
 }
+// 3608 - Олимпийская лотерея
+#include <stdio.h>
+#include <math.h>
+
+bool isPrime(long long n){
+    if(n<4)return n!=1;
+    if(n%2==0 || n%3==0)return false;
+    long long i=5,d=2;
+    for(;i<=sqrt(n);i+=d,d=6-d)if(n%i==0)return false;
+    return true;
+}
+
+int main(){
+    long long T,n,i;
+    scanf("%lld", &T);
+    while(T--){
+        scanf("%lld", &n);
+        for(i=n+1;!isPrime(i);++i);
+        printf("%lld\n", i);
+    }
+}
 // 3732 - Разящий тапок
 #include <bits/stdc++.h>
 using namespace std;
