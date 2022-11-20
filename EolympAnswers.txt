@@ -841,6 +841,16 @@ int main(){
     }
     cout<<P;
 }
+// 352 - Минимальная зарплата
+#include <stdio.h>
+
+int main(){
+    double n,ans;
+    scanf("%lf", &n);
+    ans=n;
+    while(scanf("%lf", &n)==1)if(n<ans)ans=n;
+    printf("%.2lf", ans);
+}
 // 354 - Permutation
 #include <stdio.h>
 #include <set>
