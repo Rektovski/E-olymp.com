@@ -7031,6 +7031,23 @@ int main(){
     if(n>=9*9*9*9*9*9*9*9*9)++ans;
     printf("%d",ans);
 }
+// 7335 - Saucepans and lids
+#include <stdio.h>
+#include <map>
+
+int main(){
+    short T,t,x,ans=0;
+    scanf("%hd %hd", &T, &t);
+    std::map<int,int>C;
+    while(T--)scanf("%hd", &x), ++C[x];
+    while(t--){
+        scanf("%hd", &x);
+        for(auto i=C.rbegin();i!=C.rend();++i){
+            if(x>=i->first && i->second){--C[i->first],++ans;break;}
+        }
+    }
+    printf("%hd", ans);
+}
 // 7336 - Пиріжки
 #include <iostream>
 using namespace std;
