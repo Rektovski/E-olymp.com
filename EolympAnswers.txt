@@ -989,6 +989,18 @@ int main()
         P+=N/i==N%i++;
     cout<<P;
 }
+// 462 - Keyboard
+#include <stdio.h>
+
+int main(){
+    int n,m,i,j,x;
+    scanf("%d", &n);
+    int arr[n];
+    for(i=0;i<n;++i)scanf("%d", &arr[i]);
+    scanf("%d", &m);
+    while(m--)scanf("%d", &x),--arr[x-1];
+    for(i=0;i<n;++i)arr[i]<0 ? printf("yes\n") : printf("no\n");
+}
 // 480 - Exponentiation - 2
 #include <bits/stdc++.h>
 using namespace std;
