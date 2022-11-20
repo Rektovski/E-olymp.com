@@ -7767,6 +7767,34 @@ int main(){
     cin>>a>>b;
     cout<<a*b;
 }
+// 8173 - Majority
+#include <stdio.h>
+#include <map>
+
+int main(){
+    int T,t,x;
+    scanf("%d", &T);
+    while(T--){
+        scanf("%d", &t);
+        std::map<int,int>C;
+        int Mx=0, Mj=0;
+        while(t--){
+            scanf("%d", &x);
+            ++C[x];
+            if(Mj<C[x])Mj=C[x], Mx=x;
+        }
+        int check=0;
+        for(auto i=C.begin();i!=C.end();++i){
+            if(Mj == i->second)++check;
+        }
+        if(check==1)printf("%d\n", Mx);
+        else {
+            for(auto i=C.begin();i!=C.end();++i){
+                if(Mj == i->second){printf("%d\n", i->first);break;}
+            }
+        }
+    }
+}
 // 8184 - Triangle
 #include <stdio.h>
 #include <algorithm>
