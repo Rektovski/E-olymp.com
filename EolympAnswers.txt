@@ -5736,6 +5736,21 @@ int main(){
         }
     }
 }
+// 4749 - Theater revenue
+#include <stdio.h>
+
+int main(){
+    int a,b,n,i,sum=0;
+    scanf("%d %d", &a, &b);
+    n=a*b;
+    int arr[n];
+    for(i=0;i<n;++i)scanf("%d", &arr[i]);
+    for(i=0;i<n;++i){
+        scanf("%d", &a);
+        if(a)sum+=arr[i];
+    }
+    printf("%d", sum);
+}
 // 4751 - Diagonals
 #include <bits/stdc++.h>
 using namespace std;
