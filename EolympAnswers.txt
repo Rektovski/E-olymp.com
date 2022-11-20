@@ -14212,6 +14212,14 @@ int main(){
     if(a+b==c || a+c==b || b+c==a)cout<<"Yes";
     else cout<<"No";
 }
+// 10277 - Шахівниця
+#include <stdio.h>
+
+int main(){
+    char x,n;
+    scanf("%c %c", &x, &n);
+    (x%2 && n%2) || (x%2==0 && n%2==0) ? printf("BLACK") : printf("WHITE");
+}
 // 10303 - Harmonic series
 #include <stdio.h>
 
