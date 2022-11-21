@@ -5877,6 +5877,27 @@ int main(){
     cin>>a>>b;
     fun(a,b);
 }
+// 4831 - Knapsack
+#include <stdio.h>
+
+int m[10001];
+
+int main() {
+    int limit, weight, ans=0;
+    scanf("%d", &limit);
+    m[0]=1;
+    while(scanf("%d", &weight)==1){
+        if(weight==limit){printf("%d", weight);return 0;}
+        else if(weight<limit){
+            for(int i=limit;i>=weight;--i)
+                if(m[i-weight]==1){
+                    m[i]=1;
+                    if(ans<i)ans=i;
+                }
+        }
+    }
+    printf("%d", ans);
+}
 // 4840 - Встреченные ранее числа
 #include <bits/stdc++.h>
 using namespace std;
