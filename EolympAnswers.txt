@@ -4923,6 +4923,28 @@ int main(){
         printf("%lld\n", i);
     }
 }
+// 3613 - Olympic luggage
+#include <stdio.h>
+
+int m[10001];
+
+int main() {
+    int limit, weight, ans=0;
+    short n; // We don't need this variable
+    scanf("%d %hd", &limit, &n);
+    m[0]=1;
+    while(scanf("%d", &weight)==1){
+        if(weight==limit){printf("%d", weight);return 0;}
+        else if(weight<limit){
+            for(int i=limit;i>=weight;--i)
+                if(m[i-weight]==1){
+                    m[i]=1;
+                    if(ans<i)ans=i;
+                }
+        }
+    }
+    printf("%d", ans);
+}
 // 3732 - Разящий тапок
 #include <bits/stdc++.h>
 using namespace std;
