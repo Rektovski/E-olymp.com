@@ -7365,6 +7365,14 @@ int main(){
 }
 
 // ceil დაამრგვალებს ათწილადს ზრდადობით 3.8 => 4.0
+// 7491 - Integer
+#include <stdio.h>
+
+int main(){
+    long long a,b,c;
+    scanf("%lld %lld %lld", &a, &b, &c);
+    printf("%lld", (a * 7 + b - 2) * (a - c + 5));
+}
 // 7526 - Server
 #include <iostream>
 using namespace std;
