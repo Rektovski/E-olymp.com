@@ -5031,6 +5031,15 @@ int main(){
     cin>>a>>b>>c;
     cout<<min((min(a,b)),c);
 }
+// 3872 - Юный программист и С++
+#include <stdio.h>
+
+int main(){
+    char x;
+    int ans=0;
+    while(scanf("%c", &x)==1)if(x=='\\')++ans;
+    printf("%hd", ans);
+}
 // 3912 - Реверс удавов
 #include <bits/stdc++.h>
 using namespace std;
