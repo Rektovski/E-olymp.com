@@ -11989,6 +11989,18 @@ int main(){
         else if(a<0 && b<0)if(abs(abs(a)-abs(b))%2==1)cout<<"1";
                              else cout<<"-1";
 }
+// 9002 - Chocolate lover
+#include <stdio.h>
+#include <algorithm>
+
+int main() {
+    long long n,a,b;
+    scanf("%lld %lld %lld", &n, &a, &b);
+    if(a==b)printf("%lld", a*n);
+    else n%2==0 ?
+          printf("%lld", a*(n/2)+b*(n/2)) 
+        : printf("%lld", n/2*a+n/2*b+std::max(a,b));
+}
 // 9007 - Absolute distinct count
 #include <stdio.h>
 
