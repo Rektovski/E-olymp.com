@@ -389,20 +389,17 @@ int main(){
     }
     cout<<D.size();
 }
-**************************************************************************
 // 107 - Compact discs
-#include <iostream>
-using namespace std;
+#include <stdio.h>
+
 int main(){
-    short N,P;
-    cin>>N;
-    P=N/100*100;
-    N%=100;
-    if(N>=65)P+=100,N=0;
-    P+=N/20*30;N%=20;
-    if(N>=15)P+=30;
-    else P+=N*2;
-    cout<<P;
+    short n, ans=0;
+    scanf("%hd", &n);
+    ans=n/100*100;
+    if(n%100>=65){printf("%hd", ans+100); return 0;}
+    ans+=n%100/20*30;
+    n%20>15 ? ans+=30 : ans+=n%20*2;
+    printf("%hd", ans);
 }
 // 108 - Median number
 #include <iostream>
