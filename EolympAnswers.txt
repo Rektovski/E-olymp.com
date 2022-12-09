@@ -14428,4 +14428,37 @@ int main(){
         else cout<<0<<endl;
     }
 }
-// 10467 - LinkedList Simulate Sum of Odd Eleme
+// 10467 - LinkedList Simulate Sum of Odd Elements
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    deque<int>St;
+    string s;
+    int n,ans=0;
+    while(cin>>s){
+        if(s=="push"){
+            cin>>s>>n;
+            s=="back" ? St.push_back(n) : St.push_front(n);
+        }
+        else if(s=="pop"){
+            cin>>s;
+            s=="back" ? St.pop_back() : St.pop_front();
+        }
+    }
+    while(!St.empty()){
+        if(St.back()%2)ans+=St.back();
+        St.pop_back();
+    }
+    cout<<ans;
+}
+
+// 11088 - Shopping center
+#include <stdio.h>
+
+int main(){
+    short T,a,b,ans=201;
+    scanf("%hd", &T);
+    while(T-- && scanf("%hd %hd", &a, &b) == 2)if(a+b<ans)ans=a+b;
+    printf("%hd", ans);
+}
