@@ -5304,6 +5304,17 @@ int main(){
         cout <<str;
     }
 }
+// 4283 - Stepan and pairs
+#include <stdio.h>
+
+int main(){
+    int n, count=0;
+    scanf("%d", &n);
+    for(int i=1;i<=n;++i){
+        count+=n/i;
+    }
+    printf("%d", count);
+}
 // 4433 - Проверка ПСП
 #include <bits/stdc++.h>
 using namespace std;
