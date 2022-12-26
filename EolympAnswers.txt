@@ -14465,7 +14465,15 @@ int main(){
     }
     cout<<ans;
 }
+// 10507 - Sum of digits in the text
+#include <stdio.h>
 
+int main(){
+    char x;
+    int sum=0;
+    while(scanf("%c", &x)==1)if(x>='0' && x<='9')sum+=x-'0';
+    printf("%d", sum);
+}
 // 11088 - Shopping center
 #include <stdio.h>
 
