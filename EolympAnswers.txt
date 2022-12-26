@@ -9217,6 +9217,22 @@ int main(){
     sort(A,A+i);
     cout<<A[2]-A[1];
 }
+// 8669 - All divisors
+#include <stdio.h>
+#include <math.h>
+#include <set>
+
+int main(){
+    int n;
+    scanf("%d", &n);
+    std::set<int>D;
+    for(int i=1;i<=sqrt(n);++i){
+        if(n%i==0)D.insert(i), D.insert(n/i);
+    }
+    for(auto i=D.begin();i!=D.end();++i){
+        printf("%d ", *i);
+    }
+}
 // 8672 - Square root
 #include <bits/stdc++.h>
 using namespace std;
