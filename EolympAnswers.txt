@@ -4233,6 +4233,22 @@ int main(){
     }
     cout<<count;
 }
+// 2370 - Automated Telephone Exchange
+#include <stdio.h>
+
+int main(){
+    int n, i, j, count=0;
+    scanf("%d", &n);
+    if(n>=199)printf("0");
+    else {
+        for(i=0;i<100;++i){
+            for(j=0;j<100;++j){
+                if(n-i-j==0)++count;
+            }
+        }
+        printf("%d", count);
+    }
+}
 // 2375 - Flat
 /*
 
