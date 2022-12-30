@@ -7029,6 +7029,24 @@ int main(){
     if(a.size()>=b.size())cout<<"go";
     else cout<<"no";
 }
+// 6897 - Collatz Conjecture
+#include <stdio.h>
+
+int main(){
+    short n;
+    while(scanf("%hd", &n) == 1 && n){
+        if(n==1)printf("1\n");
+        else {
+            for(int i=1;;++i){
+                n%2==0 ? n/=2 : n=3*n+1;
+                if(n==1){
+                    printf("%hd\n", i+1);
+                    break;
+                }
+            }
+        }
+    }
+}
 // 6940 - Maximum Word Frequency
 #include <bits/stdc++.h>
 using namespace std; 
