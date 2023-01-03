@@ -14552,3 +14552,16 @@ int main(){
     scanf("%d %d", &a, &b);
     printf("%d", a-b);
 }
+// 11334 - University rating
+#include <stdio.h>
+
+int main() {
+    int n, p=0, m=0, z=0;
+    scanf("%d", &n);
+    while(scanf("%d", &n) == 1){
+        if(n>0)++p;
+        else if(!n)++z;
+            else ++m;
+    }
+    printf("%d %d %d", p, m, z);
+}
