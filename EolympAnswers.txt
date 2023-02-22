@@ -14598,3 +14598,17 @@ int main() {
         }
     }
 }
+// 11389 - Huseyn's game
+#include <iostream>
+using namespace std;
+
+int main(){
+    string s;
+    cin>>s;
+    if(s.size()==1)cout<<1;
+    else {
+        int i, j;
+        for(i=0, j=s.size()-1; s[i]!=s[j] && i<=j; ++i, --j);
+        cout<<(i>j ? 0 : j-i+1);
+    }
+}
