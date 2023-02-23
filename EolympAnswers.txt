@@ -14612,3 +14612,13 @@ int main(){
         cout<<(i>j ? 0 : j-i+1);
     }
 }
+// Secret password - 11404
+#include <stdio.h>
+
+int main(){
+    char a[50], b[50];
+    scanf("%s %s", a, b);
+    for(short i=0;a[i];++i){
+        b[i] ? printf("%c%c", a[i], b[i]) : printf("%c", a[i]);
+    }
+}
