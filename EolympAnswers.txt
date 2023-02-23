@@ -14598,6 +14598,14 @@ int main() {
         }
     }
 }
+// 11376 - Burgers
+#include <stdio.h>
+
+int main(){
+    int n, m;
+    scanf("%d %d", &n, &m);
+    printf("%d", n<=m ? n : m);
+}
 // 11388 -- Cards game 2
 #include <stdio.h>
 
