@@ -14606,6 +14606,14 @@ int main(){
     scanf("%d %d", &n, &m);
     printf("%d", n<=m ? n : m);
 }
+// 11377 - Difficult problem
+#include <stdio.h>
+
+int main(){
+    int n, m;
+    scanf("%d %d", &n, &m);
+    printf(m*3<=n ? "Cheated" : "Done by himself");
+}
 // 11388 -- Cards game 2
 #include <stdio.h>
 
