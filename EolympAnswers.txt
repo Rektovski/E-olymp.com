@@ -14614,6 +14614,19 @@ int main(){
     scanf("%d %d", &n, &m);
     printf(m*3<=n ? "Cheated" : "Done by himself");
 }
+// 11378 - Juce
+#include <stdio.h>
+
+int main(){
+    int a, b, c, x, y, z;
+    scanf("%d%d%d%d%d%d", &a, &b, &c, &x, &y, &z);
+    if(a*b*c*x*y*z==0 || x/a==0 || y/b==0 || z/c==0)printf("0");
+    else {
+        int ans=0;
+        while(x/a && y/b && z/c)x-=a, y-=b, z-=c, ++ans;
+        printf("%d", ans);
+    }
+}
 // 11388 -- Cards game 2
 #include <stdio.h>
 
