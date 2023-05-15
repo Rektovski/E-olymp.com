@@ -14652,6 +14652,14 @@ int main(){
         cout<<(i>j ? 0 : j-i+1);
     }
 }
+// 11390 - Uncle Styopa policeman
+#include <stdio.h>
+
+int main(){
+    char a;
+    while(scanf("%c", &a)==1)
+        if(a>='A' && a<='Z')printf("%c", a);
+}
 // 11401 - Game
 #include <stdio.h>
 #include <map>
