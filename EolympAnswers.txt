@@ -14526,6 +14526,30 @@ int main(){
     }
     cout<<ans;
 }
+// 10468 - LinkedList Simulate Number of Even Elements
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    deque<int>St;
+    string s;
+    int n,ans=0;
+    while(cin>>s){
+        if(s=="push"){
+            cin>>s>>n;
+            s=="back" ? St.push_back(n) : St.push_front(n);
+        }
+        else if(s=="pop"){
+            cin>>s;
+            s=="back" ? St.pop_back() : St.pop_front();
+        }
+    }
+    while(!St.empty()){
+        if(St.back()%2==0)++ans;
+        St.pop_back();
+    }
+    cout<<ans;
+}
 // 10507 - Sum of digits in the text
 #include <stdio.h>
 
