@@ -14599,6 +14599,25 @@ int main(){
     scanf("%hd %hd %hd %hd", &a, &b, &c, &d);
     printf("%hd", a+b+c-d);
 }
+// 11301 - Arithmetic mean
+#include <stdio.h>
+
+int main(){
+    short a, c;
+    scanf("%hd %hd", &a, &c);
+    printf("%hd", c*2-a);
+}
+// 11302 - Петрик та екзамен
+#include <stdio.h>
+
+int main(){
+    float a, b, c, d;
+    scanf("%f %f %f %f", &a, &b, &c, &d);
+    float lowestMark = (a+b*2)*0.51;
+    a-=c, b-=d;
+    float result = a+b*2;
+    printf(result < lowestMark ? "NO" : "YES");
+}
 // 11332 - Online lesson
 #include <stdio.h>
 
