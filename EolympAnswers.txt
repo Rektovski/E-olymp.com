@@ -14591,6 +14591,14 @@ int main(){
     while(T-- && scanf("%hd %hd", &a, &b) == 2)if(a+b<ans)ans=a+b;
     printf("%hd", ans);
 }
+// 11300 - Debts
+#include <stdio.h>
+
+int main(){
+    short a, b, c, d;
+    scanf("%hd %hd %hd %hd", &a, &b, &c, &d);
+    printf("%hd", a+b+c-d);
+}
 // 11332 - Online lesson
 #include <stdio.h>
 
