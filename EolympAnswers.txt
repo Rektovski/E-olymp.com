@@ -1745,6 +1745,29 @@ int main(){
        sqrt(pow(c,2)+pow(b,2))==a )cout<<"YES";
     else cout<<"NO";
 }
+// 916 - Interesting Product
+#include <stdio.h>
+
+short A[101];
+
+int main(){
+    short a, b, c, d, result=0;
+    scanf("%hd %hd %hd %hd", &a, &b, &c, &d);
+    if(a>b){
+        int x=a;
+        a=b, b=x;
+    }
+    if(c>d){
+        int x=c;
+        c=d, d=x;
+    }
+    for(int i=a;i<=b;++i){
+        for(int j=c;j<=d;++j){
+            if(!A[i*j])A[i*j]=1, ++result;
+        }
+    }
+    printf("%d", result);
+}
 // 917 - Twice the minimum
 #include <bits/stdc++.h>
 using namespace std;
