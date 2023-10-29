@@ -6543,6 +6543,31 @@ int main(){
     cout<<A.size();
 }
 */
+// 5628 - Трицифровое число
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main(){
+    string s;
+    cin>>s;
+    short n=s.size();
+    if(n==4){
+        // number is negative
+        sort(s.rbegin(), s.rend());
+        cout<<"-"<<s.substr(0, n-1);
+    }
+    else {
+        // number is positive
+        sort(s.begin(), s.end());
+        short i=0;
+        for(;i<n; ++i){
+            if(s[i]!='0')break;
+        }
+        swap(s[0], s[i]);
+        cout<<s;
+    }
+}
 // 5711 - Вася и транспортир
 #include <bits/stdc++.h>
 using namespace std;
