@@ -14797,3 +14797,17 @@ int main(){
         b[i] ? printf("%c%c", a[i], b[i]) : printf("%c", a[i]);
     }
 }
+// 11607 - ASCII Art
+#include <stdio.h>
+
+int main(){
+    short a, b, c;
+    scanf("%hd %hd", &a, &b);
+    while(a--){
+        for(short i=0;i<b;++i){
+            scanf("%hd", &c);
+            !c ? printf(".") : printf("%c", char(c+64));
+        }
+        printf("\n");
+    }
+}
