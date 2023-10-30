@@ -14643,6 +14643,20 @@ int main(){
     float result = a+b*2;
     printf(result < lowestMark ? "NO" : "YES");
 }
+// 11303 - Transportation dilemma
+#include <stdio.h>
+#include <algorithm>
+
+int main(){
+    int b1, b2, b3, m1, m2, m3, t1, t2;
+    scanf("%d %d %d %d %d %d %d %d", &b1, &b2, &b3, &m1, &m2, &m3, &t1, &t2);
+    b1=b1+b2+b3, m1=m1+m2+m3, t1=t1+t2;
+    int arr[3]={b1, m1, t1};
+    std::sort(arr, arr+3);
+    if(arr[0]==b1)printf("Bus");
+    else if(arr[0]==m1)printf("Metro");
+        else printf("Taxi");
+}
 // 11332 - Online lesson
 #include <stdio.h>
 
