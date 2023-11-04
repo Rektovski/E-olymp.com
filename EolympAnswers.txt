@@ -14797,6 +14797,25 @@ int main(){
         b[i] ? printf("%c%c", a[i], b[i]) : printf("%c", a[i]);
     }
 }
+// 11606 - GCD and LCM
+#include <stdio.h>
+
+long long gcd(long long a, long long b);
+long long lcm(long long a, long long b);
+
+int main(){
+    long long T, a, b;
+    scanf("%lld", &T);
+    while(T--)scanf("%lld %lld", &a, &b), printf("%lld %lld\n", gcd(a, b), lcm(a, b));
+}
+
+long long gcd(long long a, long long b){
+    return !a? b : gcd(b%a, a);
+}
+
+long long lcm(long long a, long long b){
+    return a*b/gcd(a, b);
+}
 // 11607 - ASCII Art
 #include <stdio.h>
 
