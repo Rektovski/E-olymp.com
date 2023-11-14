@@ -14830,6 +14830,22 @@ int main(){
         b[i] ? printf("%c%c", a[i], b[i]) : printf("%c", a[i]);
     }
 }
+// 11420 - Трикутник для MilenaGgg
+#include <stdio.h>
+
+int main(){
+    int n;
+    scanf("%d", &n);
+    for(int i=n; i>0; --i){
+        for(int j=n-i; j>0; --j){
+            printf(" ");
+        }
+        for(int j=i; j>0; --j){
+            printf("&");
+        }
+        printf("\n");
+    }
+}
 // 11600 - Your Ride Is Here
 #include <iostream>
 using namespace std;
