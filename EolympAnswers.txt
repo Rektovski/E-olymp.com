@@ -14980,6 +14980,22 @@ int main(){
     }
     cout<<ans;
 }
+// 11438 - Цифровий string
+#include <iostream>
+using namespace std;
+
+int main(){
+    int T;
+    cin>>T;
+    string s;
+    getline(cin, s);
+    while(getline(cin, s)){
+        int ans=0;
+        for(int i=0;s[i];++i)
+            if(s[i]>='0' && s[i]<='9')++ans;
+        cout<<ans<<endl;
+    }
+}
 // 11600 - Your Ride Is Here
 #include <iostream>
 using namespace std;
