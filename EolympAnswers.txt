@@ -14964,6 +14964,13 @@ template<typename T> void input_arr(T *arr , int &n){
 template<typename T> void output_arr( T *arr , int n) {
     for(int i=0;i<n;++i)cout<<arr[i]<<" ";
 }
+// 11424 - Найбільший елемент масиву. (Шаблон функції).
+template<typename T>T Max_Element(T *arr, int &n){
+    T result = arr[0];
+    for(int i=0;i<n;++i)if(result<arr[i])result=arr[i];
+    return result;
+}
+
 // 11434 - Find the product
 #include <bits/stdc++.h>
 using namespace std;
