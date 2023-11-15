@@ -14955,6 +14955,15 @@ int main(){
         printf("\n");
     }
 }
+// 11423 - Введення виведення масиву. (Шаблон функції).
+template<typename T> void input_arr(T *arr , int &n){
+    cin>>n;
+    for(int i=0;i<n;++i)cin>>arr[i];
+}
+
+template<typename T> void output_arr( T *arr , int n) {
+    for(int i=0;i<n;++i)cout<<arr[i]<<" ";
+}
 // 11434 - Find the product
 #include <bits/stdc++.h>
 using namespace std;
