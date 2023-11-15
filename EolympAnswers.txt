@@ -5953,6 +5953,13 @@ ceil of 3.8 is 4.0
 ceil of -2.3 is -2.0
 ceil of -3.8 is -3.0
 */
+// 4817 - Rectangle
+#include <stdio.h>
+
+int main(){
+    int a, b;
+    while(scanf("%d %d", &a, &b)==2)printf("%d %d\n", 2*(a+b), a*b);
+}
 // 4826 - От альфы до омеги
 #include <bits/stdc++.h>
 using namespace std;
