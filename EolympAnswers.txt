@@ -13868,6 +13868,14 @@ int main(){
     ans-=m;
     cout<<ans/2;
 }
+// 9964 - Послідовність 1
+#include <stdio.h>
+
+int main() {
+    short n;
+    scanf("%hd", &n);
+    for(short i=1; i<=n; ++i)printf("%hd ", i);
+}
 // 10028 - Характеристика
 #include <bits/stdc++.h>
 using namespace std;
