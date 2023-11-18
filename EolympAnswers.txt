@@ -14002,6 +14002,72 @@ int main() {
         cout<<endl;
     }
 }
+// 9980 - Сходинки вверх
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n, i;
+    cin>>n;
+    for(i=1;i<=n;++i){
+        int d=n-i;
+        while(d--)cout<<" ";
+        d=i;
+        while(d--)cout<<"#";
+        cout<<endl;
+    }
+}
+// 9981 - Ще такі сходинки
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n, i;
+    cin>>n;
+    for(i=0;i<n;++i){
+        int d=i;
+        while(d--)cout<<" ";
+        d=n-i;
+        while(d--)cout<<"#";
+        cout<<endl;
+    }
+}
+// 9982 - Матриця 1
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n, i=0;
+    cin>>n;
+    for(int i=0;i<n;++i){
+        int m=n, j=i;
+        string s="";
+        while(m--)s+=char(j+48);
+        cout<<s<<endl;
+    }
+}
+// 9983 - Матриця 2
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n, i=0;
+    cin>>n;
+    for(int i=0;i<n;++i){
+        string s="";
+        if(i%2==0){
+            for(int j=0;j<n;++j){
+                j%2==0 ? s+='0' : s+='1';
+            }
+        }
+        else {
+            for(int j=0;j<n;++j){
+                j%2==0 ? s+='1' : s+='0';
+            }
+        }
+        cout<<s<<endl;
+    }
+}
 // 10028 - Характеристика
 #include <bits/stdc++.h>
 using namespace std;
