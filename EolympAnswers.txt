@@ -15321,3 +15321,19 @@ int main(){
         printf("\n");
     }
 }
+// 11610 - Cost of letters
+#include <stdio.h>
+
+int main(){
+    char x;
+    long long n, m=1000000007;
+    while(scanf("%c", &x)==1){
+        if(x>='A' && x<='Z') {
+            n = int(x)-64; break;
+        }
+    }
+    while(scanf("%c", &x)==1){
+        if(x>='A' && x<='Z')n = (n*(int(x)-64))%m;
+    }
+    printf("%lld", n);
+}
