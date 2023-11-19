@@ -11429,6 +11429,91 @@ int main(){
         cout<<endl;
     }
 }
+// 8949 - Template 4
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n, i, j;
+    cin>>n;
+    string s="";
+    for(i=0 ; i<n ; ++i)s+="*";
+    cout<<s<<endl;
+    int m = s.size();
+    string temp = s;
+    for(i=0, j=m-1; i < m/2 ; ++i, --j){
+        temp[i]=temp[j]=' ';
+        cout<<temp<<endl;
+    }
+    for(i=m/2-1, j=m/2+1; i >=0 ; --i, ++j){
+        temp[i]=temp[j]='*';
+        cout<<temp<<endl;
+    }
+}
+// 8950 - Template 5
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n, i, j;
+    cin>>n;
+    string s="";
+    for(i=0 ; i<n ; ++i)s+=' ';
+    int m=s.size();
+    for(i=0, j=m-1; i<m/2 ; ++i, --j){
+        s[i]=s[j]='*';
+        cout<<s<<endl;
+    }
+    s[m/2]='*';
+    cout<<s<<endl;
+    s[m/2]=' ';
+    cout<<s<<endl;
+    for(i=m/2-1, j=m/2+1; i>0 ; --i, ++j){
+        s[i]=s[j]=' ';
+        cout<<s<<endl;
+    }
+}
+// 8951 - Template 6
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n, i, j;
+    cin>>n;
+    string s="";
+    for(i=0 ; i<n ; ++i)s+=' ';
+    int m=s.size();
+    for(i=m/2, j=m/2; i>=0 ; --i, ++j){
+        s[i+1]=s[j-1]=' ';
+        s[i]=s[j]='*';
+        cout<<s<<endl;
+    }
+    for(i=0, j=m-1; i<m/2 ; ++i, --j){
+        s[i]=s[j]=' ';
+        s[i+1]=s[j-1]='*';
+        cout<<s<<endl;
+    }
+}
+// 8952 - Template 7
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n, i, j;
+    cin>>n;
+    string s="";
+    for(i=0 ; i<n ; ++i)s+=' ';
+    int m=s.size();
+    for(i=m/2, j=m/2; i>=0 ; --i, ++j){
+        s[i]=s[j]='*';
+        cout<<s<<endl;
+    }
+    for(i=0, j=m-1; i<m/2 ; ++i, --j){
+        s[i]=s[j]=' ';
+        s[i+1]=s[j-1]='*';
+        cout<<s<<endl;
+    }
+}
 // 8953 - Print array
 #include <bits/stdc++.h>
 using namespace std;
