@@ -15255,6 +15255,14 @@ int main(){
     getline(cin, className);
     cout<<number<<endl<<classChar<<endl<<className;
 }
+// 11464 - Symbol code
+#include <stdio.h>
+
+int main(){
+    char c;
+    scanf("%c", &c);
+    printf("%d", c);
+}
 // 11473 - Кількість розрядів
 #include <stdio.h>
 
