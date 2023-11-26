@@ -14920,6 +14920,17 @@ int main(){
     while(scanf("%c", &x)==1)if(x>='0' && x<='9')sum+=x-'0';
     printf("%d", sum);
 }
+// 10868 - Number of elements in unimodal sequence
+#include <stdio.h>
+
+int arr[100000001];
+
+int main(){
+    int n, t, x;
+    scanf("%d %d", &n, &t);
+    while(n--)scanf("%d", &x), ++arr[x];
+    while(t--)scanf("%d", &x), printf("%d\n", arr[x]);
+}
 // 11088 - Shopping center
 #include <stdio.h>
 
