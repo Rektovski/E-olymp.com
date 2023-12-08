@@ -2658,6 +2658,15 @@ int main(){
         if(Y==1)cout<<X;
     }
 }
+// 1142 - Division by zero or
+#include <stdio.h>
+
+int main(){
+    long long a, b;
+    scanf("%lld %lld", &a, &b);
+    if(!b)printf("ERROR");
+    else printf("%lld", a/b);
+}
 // 1143 - Division by zero 2 or
 #include <stdio.h>
 
