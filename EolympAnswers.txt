@@ -12338,6 +12338,93 @@ int main(){
     for(i=0;i<10;++i)
         cout<<A[i]<<" ";
 }
+// 9051 - Class Vector
+class Vector {
+    int x, y, z;
+    
+    public:
+    // Default
+    Vector() {
+        x=y=z=0;
+    }
+    
+    // Constructor
+    Vector(int x, int y, int z) : x(x), y(y), z(z) {}
+
+    // Copy Constructor
+    Vector(const Vector& v) : x(v.x), y(v.y), z(v.z) {}
+    
+    void setX(int x) {
+        this->x=x;
+    }
+    
+    void setY(int y){
+        this->y=y;
+    }
+    
+    void setZ(int z){
+        this->z=z;
+    }
+    
+    int getX(){
+        return x;
+    }
+    
+    int getY(){
+        return y;
+    }
+    
+    int getZ(){
+        return z;
+    }
+    
+    
+    double length(){
+        return sqrt(double(x*x+y*y+z*z));
+    }
+    
+    void Out(){
+        printf("%d %d %d\n", x, y, z);
+    }
+};
+// 9070 - Class Triangle
+class Triangle {
+    int a,b,c,d,e,f;
+
+public:
+    Triangle(){
+        a=b=c=d=e=f=0;
+    }
+
+    Triangle(int a, int b, int c, int d, int e, int f)
+    : a(a), b(b), c(c), d(d), e(e), f(f) {}
+
+    double A=sqrt(pow(abs(a-c), 2) + pow(abs(b-d), 2));
+    double B=sqrt(pow(abs(c-e), 2) + pow(abs(d-f), 2));
+    double C=sqrt(pow(abs(e-a), 2) + pow(abs(f-b), 2));
+
+    void Out() {
+        printf("%d %d %d %d %d %d\n", a, b, c, d, e, f);
+    }
+
+    double perimeter() {
+        return A+B+C;
+    }
+
+    double s=perimeter()/2;
+
+    double area() {
+        return sqrt(s*(s-A)*(s-B)*(s-C));
+    }
+
+    double inscribedRadius() {
+        return area()/s;
+    }
+
+    double describedRadius() {
+        return A*B*C/(4*area());
+    }
+};
 // 9393 - Delete odd digits
 #include <bits/stdc++.h>
 using namespace std;
