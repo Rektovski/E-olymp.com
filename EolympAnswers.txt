@@ -15636,3 +15636,23 @@ int main(){
     for(int i=0;i<=3;++i)
         printf("%hd ", A[i]);
 }
+// 11642 - Вкладені квадрати
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    float a, b, c;
+    scanf("%f%f%f", &a, &b, &c);
+    if(c==1){
+        float surface = a*a;
+        while(b--)surface/=2;
+        int ans = surface;
+        printf("%d", ans);
+    }
+    else {
+        float lengthNow = a;
+        while(b--)lengthNow=sqrt(2*pow(lengthNow/2, 2));
+        int ans = 4*lengthNow;
+        printf("%d", ans);
+    }
+}
