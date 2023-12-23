@@ -12991,6 +12991,16 @@ int main(){
     scanf("%lf", &R);
     printf("%.4lf", R*R*M_PI);
 }
+// 9576 - Довжина кола
+#include <stdio.h>
+#include <math.h>
+#include <iomanip>
+
+int main(){
+    float R;
+    scanf("%f", &R);
+    printf("%.3f", 2*M_PI*R);
+}
 // 9610 - Mixed sequence
 #include <bits/stdc++.h>
 using namespace std;
@@ -14067,6 +14077,15 @@ int main(){
     }
     ans-=m;
     cout<<ans/2;
+}
+// 9963 - Довжина відрізка
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    float x1, y1, x2, y2;
+    scanf("%f%f%f%f", &x1, &y1, &x2, &y2);
+    printf("%.2f", sqrt(pow(x2-x1, 2) + pow(y2-y1, 2)));
 }
 // 9964 - Послідовність 1
 #include <stdio.h>
