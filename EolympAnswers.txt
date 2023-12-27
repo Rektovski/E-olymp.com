@@ -4554,6 +4554,41 @@ int main() {
 }
 
 */
+// 2618 - The next number
+#include <bits/stdc++.h>
+using namespace std; 
+
+int main(){
+    string s;
+    cin>>s;
+    reverse(s.begin(), s.end());
+    if(s[0]<'9'){
+        // 1234 -> 1235
+        s[0]+=1;
+        reverse(s.begin(), s.end());
+        cout<<s;
+    }
+    else if(s[1]!='9' && s.size()>1){
+        // 889 -> 890
+        s[0]='0', s[1]+=1;
+        reverse(s.begin(), s.end());
+        cout<<s;
+    }
+    else {
+        // 889 -> 890
+        int i = 0;
+        for( ; s[i] ; ++i) {
+            if(s[i]=='9')s[i]='0';
+            else if(s[i]!='9'){
+                s[i]+=1;
+                break;
+            }
+        }
+        reverse(s.begin(), s.end());
+        //                      999 -> 1000   :  889 -> 890
+        cout<<(i == s.size() ?     '1'+s      :       s);
+    }
+}
 // 2661 - Price labels
 #include <bits/stdc++.h>
 using namespace std;
