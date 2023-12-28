@@ -4356,6 +4356,14 @@ int main(){
         cout<<n*b+a;
     }
 }
+// 2400 - Triangles
+#include <stdio.h>
+
+int main(){
+    long long n;
+    scanf("%lld", &n);
+    printf("%lld", n*n);
+}
 // 2415 - Disc Number
 #include <iostream>
 using namespace std;
