@@ -1256,6 +1256,14 @@ int main(){
     if(b<0)b=-b;
     cout<<a*a+b*b;
 }
+// 520 - The sum of all
+#include <stdio.h>
+
+int main(){
+    long long a, b=0;
+    while(scanf("%lld", &a)==1)b+=a;
+    printf("%lld", b);
+}
 // 542 - Soda Surplier
 **********************************************************************
 /* ამოცანა: წვენის მოყვარული
