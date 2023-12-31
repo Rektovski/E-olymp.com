@@ -4356,6 +4356,60 @@ int main(){
         cout<<n*b+a;
     }
 }
+// 2392 - Interesting Sum
+#define ll long long
+#include <iostream>
+#include <sstream>
+#include <algorithm>
+using namespace std;
+
+string intToString(ll number);
+
+string maxFromString(string text);
+
+ll stringToInt(string text);
+
+string findMinimumNumber(ll number);
+
+int main() {
+    ll n;
+    cin >> n;
+    cout << stringToInt(maxFromString(intToString(n))) + stringToInt(findMinimumNumber(n));
+}
+
+string intToString(ll number) {
+    stringstream SS;
+    string text;
+    SS << number, SS >> text;
+    return text;
+}
+
+string maxFromString(string text) {
+    sort(text.rbegin(), text.rend());
+    return text;
+}
+
+ll stringToInt(string text) {
+    stringstream SS;
+    ll number;
+    SS << text, SS >> number;
+    return number;
+}
+
+string findMinimumNumber(ll number) {
+    string text = intToString(number);
+    sort(text.begin(), text.end());
+    int index;
+    char character;
+    for (int i = 0; text[i]; ++i) {
+        if (text[i] != '0') {
+            index = i, character = text[i];
+            break;
+        }
+    }
+    text.erase(text.begin() + index);
+    return character + text;
+}
 // 2400 - Triangles
 #include <stdio.h>
 
