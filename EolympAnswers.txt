@@ -868,6 +868,19 @@ int main(){
     while(cin>>n)ans=max(ans,n);
     cout<<setprecision(2)<<fixed<<ans;
 }
+// 358 - Progress in artillery begins
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    if(!n)printf("6");
+    else {
+        int ans=0, arr[10]={6, 2, 5, 5, 4, 5, 6, 3, 7, 6};
+        while(n)ans+=arr[n%10], n/=10;
+        printf("%d", ans);
+    }
+}
 // 388 - Transformation
 #include <bits/stdc++.h>
 using namespace std;
