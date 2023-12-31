@@ -814,6 +814,18 @@ int main(){
     cin>>x>>n>>m;
     cout<<exponentMod(x,n,m);
 }
+// 329 - Number of words
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    string s;
+    long long i,ans=0;
+    while(cin>>s){
+        if(s!="-")++ans;
+    }
+    cout<<ans;
+}
 // 330 - Word the champion
 #include <bits/stdc++.h>
 using namespace std;
