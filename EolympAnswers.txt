@@ -1030,6 +1030,19 @@ int main(){
     cin>>a>>b>>c;
     cout<<binaryPower(a,b,c);
 }
+// 481 - Repeat: how many times to repeat?
+#include <stdio.h>
+
+int main(){
+    long long n, ans=0;
+    scanf("%lld", &n);
+    while(n>0){
+        long long a=n,b=0;
+        while(a)b+=a%10,a/=10;
+        ++ans,n-=b;
+    }
+    printf("%lld", ans);
+}
 // 488 - Bypass matrix with "snake"
 #include <iostream>
 using namespace std;
