@@ -1336,6 +1336,49 @@ int main(){
     }
     cout<<P;
 }
+// 572 - The Lesson of mathematics
+#include <bits/stdc++.h>
+using namespace std;
+
+string iToS(int n){
+    stringstream SS;
+    string s;
+    SS<<n, SS>>s;
+    return s;
+}
+
+int isPrime(int n){
+    if(n<4)return n!=1;
+    if(n%2==0 || n%3==0)return 0;
+    int i=5, d=2;
+    for(; i<=sqrt(n); i+=d, d=6-d)
+        if(n%i==0)return 0;
+    return 1;
+}
+
+int main() {
+    int n;
+    cin>>n;
+    map<int, int>C;
+    for(int i=2;i<=n;){
+        if(n%i==0){
+            if(isPrime(i))++C[i];
+            n/=i, i=2;
+        }
+        else ++i;
+    }
+    int iterator=1;
+    string s="";
+    for(auto i=C.begin(); i!=C.end(); ++i){
+        if(i->second>1){
+            s+=iToS(i->first)+"^"+iToS(i->second);
+        }
+        else s+=iToS(i->first);
+        s+="*";
+    }
+    s.erase(s.begin()+s.size()-1);
+    cout<<s;
+}
 // 575 - Sequence (RU)
 #include <stdio.h>
 
