@@ -15869,3 +15869,16 @@ int main(){
     scanf("%lld%lld", &a, &b);
     printf("%lld", a*b);
 }
+// 11652 - Four digit numbers
+#include <stdio.h>
+
+int main(){
+    short n, ans=0;
+    scanf("%hd", &n);
+    for(int i=1000;i<=9999;++i){
+        int temp = i, sum=0;
+        while(temp)sum+=temp%10, temp/=10;
+        if(sum == n) ++ans;
+    }
+    printf("%hd", ans);
+}
