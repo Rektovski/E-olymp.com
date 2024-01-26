@@ -13265,6 +13265,18 @@ int main(){
         cout<<endl;
     }
 }
+// 9638 - Easy problem for Dino
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    double a, b, c;
+    int n;
+    cin>>a>>b;
+    c=(a+b)/2, n=(a+b)/2;
+    if(c==n)cout<<n;
+    else cout<<"-";
+}
 // 9648 - Sort the digits of numbers
 #include <bits/stdc++.h>
 using namespace std;
