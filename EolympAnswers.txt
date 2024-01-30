@@ -4901,6 +4901,23 @@ int main()
     if(P)cout<<P;
     else cout<<"Ok";
 }
+// 2817 - Binary Numbers
+#include <iostream>
+using namespace std;
+
+int main(){
+    short T;
+    int n;
+    cin>>T;
+    while(T--){
+        cin>>n;
+        for(int i=0; n ; ++i){
+            if(n%2)cout<<i<<" ";
+            n/=2;
+        }
+        cout<<endl;
+    }
+}
 // 2860 - Sum of integers on the interval
 #include <iostream>
 using namespace std;
