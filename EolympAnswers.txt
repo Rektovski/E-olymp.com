@@ -15953,3 +15953,12 @@ int main(){
     }
     printf("%hd", ans);
 }
+// 11656 - Квадратична функція
+#define ll long long
+#include <stdio.h>
+
+int main(){
+    ll a,b,c,x;
+    scanf("%lld %lld %lld %lld", &a, &b, &c, &x);
+    printf("%lld", a*x*x+b*x+c);
+}
