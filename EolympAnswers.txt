@@ -15962,3 +15962,14 @@ int main(){
     scanf("%lld %lld %lld %lld", &a, &b, &c, &x);
     printf("%lld", a*x*x+b*x+c);
 }
+// 11657 - Видалення рядків
+#define ll long long
+#include <stdio.h>
+#include <algorithm>
+
+int main(){
+    ll n, Mx=0, Mn=1000000;
+    scanf("%lld", &n);
+    while(scanf("%lld", &n)==1)Mx=std::max(Mx, n), Mn=std::min(Mn, n);
+    printf("%lld", Mx-Mn);
+}
