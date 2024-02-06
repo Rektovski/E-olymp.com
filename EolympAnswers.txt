@@ -516,6 +516,30 @@ int main()
 }
 
 */
+// 126 - Number of an apartment
+#include <iostream>
+using namespace std;
+
+int main(){
+    int binebisRaodenoba,padiezdebi,sartulebi,sadziebeliBinisNomeri,Example,ans;
+	cin>>binebisRaodenoba>>padiezdebi>>sartulebi>>sadziebeliBinisNomeri;
+	// #1
+    Example=sadziebeliBinisNomeri;
+	ans=1;
+	while(Example>binebisRaodenoba/padiezdebi){
+		Example-=binebisRaodenoba/padiezdebi;
+		++ans;
+	}
+	cout<<ans<<" ";
+    // #2
+	ans=1;
+	while(sadziebeliBinisNomeri>binebisRaodenoba/(padiezdebi*sartulebi)){
+		sadziebeliBinisNomeri-=binebisRaodenoba/(padiezdebi*sartulebi);
+		++ans;
+		if(ans==sartulebi+1)ans=1;
+	}
+	cout<<ans<<endl;
+}
 // 128 - Lucky tickets
 #include <stdio.h>
 
