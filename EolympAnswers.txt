@@ -6741,6 +6741,30 @@ int main(){
     cin>>a>>k;
     cout<<(a&~(1<<k));
 }
+// 5322 - Numeral system - 1
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    string binary_number, result;
+    cin >> binary_number;
+    if (binary_number.size() % 4) {
+        while (binary_number.size() % 4) {
+            binary_number = '0' + binary_number;
+        }
+    }
+    for (int i = 0; binary_number[i]; i += 4) {
+        string temp_binary_quad = "";
+        for (int j = 0; j < 4; ++j) {
+            int k = i + j;
+            temp_binary_quad += binary_number[k];
+        }
+        int temp_quad_integer = stoi(temp_binary_quad, 0, 2); // binary string to integer decimal
+        temp_quad_integer < 10 ? result+=char(temp_quad_integer+48) : result+=char(temp_quad_integer+55);
+    }
+    cout<<result;
+}
 // 5325 - Stand in order
 #include <bits/stdc++.h>
 using namespace std;
