@@ -14465,6 +14465,19 @@ int main() {
     }
     printf("%lld ", sum);
 }
+// 9973 - Сума 4
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    unsigned long long n, result;
+    cin>>n;
+    for(int i=1;i<=n;++i){
+        result+=i*i*i;
+    }
+    cout<<result;
+}
 // 9974 - Сума 5
 #include <stdio.h>
 
@@ -14488,6 +14501,51 @@ int main() {
         d=sum-d; // 3 9 27
     }
     printf("%llu ", sum-2);
+}
+// 9976 - Сума 7
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    unsigned long long n;
+    double result=0;
+    cin>>n;
+    for(double i=1;i<=n;++i){
+        result+=i/(i+1);
+    }
+    cout<<fixed<<setprecision(3)<<result;
+}
+// 9977 - Сума 8
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    unsigned long long n;
+    double result=0, j=1;
+    cin>>n;
+    for(int i=0;i<n;++i, j+=2){
+        result+=j/(j+1);
+    }
+    cout<<fixed<<setprecision(3)<<result;
+}
+// 9978 - Сума 9
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    unsigned long long n;
+    double result=0, i=1, j=1;
+    cin>>n;
+    for(;i<=n;++i, j+=2){
+        result+=i/j;
+    }
+    cout<<fixed<<setprecision(3)<<result;
 }
 // 9979 - Сходинки вниз
 #include <bits/stdc++.h>
@@ -14567,6 +14625,220 @@ int main() {
         }
         cout<<s<<endl;
     }
+}
+// 9984 - Матриця 3
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    short n;
+    cin>>n;
+    string s="";
+    while(n--)s+=char(n+48);
+    reverse(s.begin(), s.end());
+    for(int i=0; s[i]; ++i) {
+        cout<<s<<endl;
+        s=s.substr(1, s.size()-1) + s[0];
+    }
+}
+// 9985 - Two-digit numbers
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    int n, check=0;
+    cin>>n;
+    for(int i=10; i<=99;++i){
+        int temp = i, sumOfDigits=0;
+        if(temp%10 != temp/10) {
+            while(temp)sumOfDigits+=temp%10, temp/=10;
+        }
+        if(sumOfDigits == n)check = 1, cout<<i<<" ";
+    }
+    if(!check)cout<<"No";
+}
+// 9986 - Two-digit numbers 2
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int n, result = 0;
+    cin>>n;
+    for(int i=10; i<=99;++i){
+        if(i/10 < i%10 && i/10 + i%10 == n) ++result;
+    }
+    cout<<result;
+}
+// 9987 - Two-digit numbers 3
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int n, result = 0;
+    cin>>n;
+    for(int i=10; i<=99;++i){
+        if(i/10 > i%10 && i/10 + i%10 == n) result+=i;
+    }
+    cout<<result;
+}
+// 9988 - Two-digit numbers 4
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int n, result = 0;
+    cin>>n;
+    for(int i=11; i<=99; i+=2){
+        if(i/10%2 && i%10%2 && i/10 + i%10 == n) ++result;
+    }
+    cout<<result;
+}
+// 9989 - Two-digit numbers 5
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int n, result = 0;
+    cin>>n;
+    for(int i=10; i<=98; i+=2){
+        if(i/10%2==0 && i%10%2==0 && i/10 + i%10 == n) result+=i;
+    }
+    cout<<result;
+}
+// 9990 - Two-digit numbers 6
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int n, check=0;
+    cin>>n;
+    for(int i=10; i<=99; ++i){
+        if(((i/10%2==0 && i%10%2==0) || (i/10%2 && i%10%2)) && i/10 + i%10 == n) cout<<i<<" ", check=1;
+    }
+    if(!check)cout<<"No";
+}
+// 9991 - Three-digit numbers
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int n, result;
+    cin>>n;
+    for(int i=100; i<=999; ++i){
+        int a=i/100, b=i/10%10, c=i%10;
+        if(a<b && b<c && a+b+c==n)++result;
+    }
+    cout<<result;
+}
+// 9992 - Three-digit numbers 2
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int n, result;
+    cin>>n;
+    for(int i=100; i<=999; ++i){
+        int a=i/100, b=i/10%10, c=i%10;
+        if(a%2 && b%2 && c%2 && a+b+c==n)result+=i;
+    }
+    cout<<result;
+}
+// 9993 - Three-digit numbers 3
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int n, check=0;
+    cin>>n;
+    for(int i=100; i<=999; ++i){
+        int a=i/100, b=i/10%10, c=i%10;
+        if(a!=b && a!=c && b!=c && a+b+c==n)cout<<i<<" ", check=1;
+    }
+    if(!check)cout<<"No";
+}
+// 9994 - Three-digit numbers 4
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int n, result=0;
+    cin>>n;
+    for(int i=100; i<=999; ++i){
+        int a=i/100, b=i/10%10, c=i%10;
+        if(a%2==0 && b%2==0 && c%2==0 && a+b+c==n)++result;
+    }
+    cout<<result;
+}
+// 9995 - Three-digit numbers 5
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int n, result=0;
+    cin>>n;
+    for(int i=100; i<=999; ++i){
+        int a=i/100, b=i/10%10, c=i%10;
+        if(a>b && b>c && a+b+c==n)result+=i;
+    }
+    cout<<result;
+}
+// 9997 - Three-digit numbers 7
+#include <iostream>
+#include <sstream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    int n, check=0;
+    cin>>n;
+    for(int i=100; i<=999; ++i){
+        int a=i/100, b=i/10%10, c=i%10;
+        stringstream SS;
+        string s, temp;
+        SS<<i, SS>>s;
+        temp = s;
+        reverse(temp.begin(), temp.end());
+        if(s==temp && a+b+c==n)cout<<i<<" ", check=1;
+    }
+    if(!check)cout<<"No";
+}
+// 9998 - Three-digit numbers 8
+#include <iostream>
+#include <cmath>
+#include <sstream>
+
+using namespace std;
+
+int main() {
+    int n, check=0;
+    cin>>n;
+    string result = "";
+    for(int i=10; i<=31; ++i){
+        int temp_int = i*i;
+        int a=temp_int/100, b=temp_int/10%10, c=temp_int%10;
+        if(a+b+c==n){
+            check=1;
+            stringstream SS;
+            string s;
+            SS<<temp_int, SS>>s;
+            result+=s+' ';
+        }
+    }
+    cout<<(!check ? "No" : result.substr(0, result.size()-1));
 }
 // 10028 - Характеристика
 #include <bits/stdc++.h>
