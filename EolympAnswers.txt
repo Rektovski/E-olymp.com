@@ -16119,6 +16119,28 @@ int main(){
     if(n>0)printf("%lld", n);
     else printf("0");
 }
+// 11513 - Simple game
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    string s;
+    int result=0;
+    while(n--){
+        int i=0;
+        cin>>s;
+        while(s[i]){
+            if(s[i]=='A')result+=4;
+            else if(s[i]=='K')result+=3;
+            else if(s[i]=='Q')result+=2;
+            else if(s[i]=='J')result+=1;
+            ++i;
+        }
+    }
+    cout<<result;
+}
 // 11600 - Your Ride Is Here
 #include <iostream>
 using namespace std;
