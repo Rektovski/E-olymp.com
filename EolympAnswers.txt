@@ -7962,7 +7962,7 @@ n=9 >> pow(5,9)
 but as pow is not working after some powered numbers
 we have to use code that is written on the first line
 */
-// ВІДСУТНІЙ НОМЕР
+// 7822 ВІДСУТНІЙ НОМЕР
 #include <stdio.h>
 
 int main(){
