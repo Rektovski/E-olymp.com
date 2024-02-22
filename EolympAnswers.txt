@@ -4032,6 +4032,25 @@ int main(){
         printf("\n");
     }
 }
+// 2014 - Lucky Number
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    string s;
+    cin>>s;
+    if(s[0]=='-')s = s.substr(1, s.size()-1);
+    int point = s.find('.');
+    if(point==-1)cout<<"No";
+    else {
+        int left=0, right=0;
+        for(int i=0;i<point;++i)
+            left+=s[i]-'0';
+        for(int i=point+1;s[i];++i)
+            right+=s[i]-'0';
+        cout<<(left == right ? "Yes" : "No");
+    }
+}
 // 2031 - Fibonacci sequence
 #include <bits/stdc++.h>
 using namespace std;
